@@ -1,0 +1,15 @@
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\ApplicationIcon.png
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Background.png
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Dieta.dll
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Dieta.pdb
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\AppManifest.xaml
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Dieta.xap
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.dll
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.xml
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\App.g.cs
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\MainPage.g.cs
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.g.resources
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.dll
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.pdb
+c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\XapCacheFile.xml
