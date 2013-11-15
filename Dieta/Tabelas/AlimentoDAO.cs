@@ -7,8 +7,7 @@ using System.ComponentModel;
 
 namespace Dieta.Tabelas
 {
-    [Table]
-    public class Almoco :INotifyPropertyChanged, INotifyPropertyChanging
+    class AlimentoDAO : INotifyPropertyChanged, INotifyPropertyChanging
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public event PropertyChangingEventHandler PropertyChanging;
@@ -30,7 +29,7 @@ namespace Dieta.Tabelas
         }
 
         private int _id;
-        [Column(IsPrimaryKey=true, IsDbGenerated=true,DbType="INT NOT NULL Identity", CanBeNull=false,AutoSync=AutoSync.OnInsert]
+        [Column(IsPrimaryKey=true, IsDbGenerated=true,DbType="INT NOT NULL Identity", CanBeNull=false,AutoSync=AutoSync.OnInsert)]
         public int Id
         {
             get {return _id;}
@@ -143,6 +142,40 @@ namespace Dieta.Tabelas
                     this.NotifyPropertyChanging("Carboidratos");
                     _carboidratos = value;
                     this.NotifyPropertyChanged("Carboidratos");
+                }
+            }
+        }
+
+        [Column]
+        private string _tipoRefeicao;
+
+        public string TipoRefeicao
+        {
+            get{ return _tipoRefeicao;}
+            set
+            {
+                if(_tipoRefeicao != value)
+                {
+                    this.NotifyPropertyChanging("Tipo de refeições");
+                    _tipoRefeicao = value;
+                    this.NotifyPropertyChanged("Tipo de refeições");
+                }
+            }
+        }
+
+        [Column]
+        private bool _deleta;
+
+        public bool Deleta
+        {
+            get { return _deleta; }
+            set
+            {
+                if (_deleta != value)
+                {
+                    this.NotifyPropertyChanging("Deleta");
+                    _deleta = value;
+                    this.NotifyPropertyChanged("Deleta");
                 }
             }
         }

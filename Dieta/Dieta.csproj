@@ -67,11 +67,14 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tabelas\Almoco.cs" />
-    <Compile Include="Tabelas\Cafe.cs" />
-    <Compile Include="Tabelas\Ceia.cs" />
-    <Compile Include="Tabelas\Janta.cs" />
-    <Compile Include="Tabelas\Lanche.cs" />
+    <Compile Include="Tabelas\AlimentoDAO.cs" />
+    <Compile Include="Tabelas\AlmocoDAO.cs" />
+    <Compile Include="Tabelas\CafeDAO.cs" />
+    <Compile Include="Tabelas\CeiaDAO.cs" />
+    <Compile Include="Tabelas\JantaDAO.cs" />
+    <Compile Include="Tabelas\LancheDAO.cs" />
+    <Compile Include="Tabelas\RefeicaoDAO.cs" />
+    <Compile Include="Tabelas\WPDataContext.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>

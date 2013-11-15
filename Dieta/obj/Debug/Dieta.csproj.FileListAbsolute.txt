@@ -13,3 +13,18 @@ c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Diet
 c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.dll
 c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.pdb
 c:\users\carlos\documents\visual studio 2012\Projects\Dieta\Dieta\obj\Debug\XapCacheFile.xml
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\App.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\MainPage.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.g.resources
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.dll
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.pdb
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\ApplicationIcon.png
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Background.png
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.dll
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.pdb
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\AppManifest.xaml
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.xap
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\XapCacheFile.xml

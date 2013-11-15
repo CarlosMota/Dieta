@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Dieta.Tabelas;
 
 namespace Dieta
 {
@@ -73,6 +74,14 @@ namespace Dieta
                 // Caution:- Use this under debug mode only. Application that disables user idle detection will continue to run
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
+
+                using (WPDataContext db = new WPDataContext(WPDataContext.DBConnectionString))
+                {
+                    if (db.DatabaseExists() == false) 
+                    {
+                        db.CreateDatabase();  
+                    }
+                }
             }
         }
 
