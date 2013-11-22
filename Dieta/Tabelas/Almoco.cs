@@ -9,7 +9,7 @@ using System.ComponentModel;
 namespace Dieta.Tabelas
 {
     [Table]
-    public class AlmocoDAO :INotifyPropertyChanged, INotifyPropertyChanging
+    public class Almoco :INotifyPropertyChanged, INotifyPropertyChanging
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public event PropertyChangingEventHandler PropertyChanging;

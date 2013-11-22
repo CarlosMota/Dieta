@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dieta.Tabelas
 {
-    class RefeicaoDAO
+    class Refeicao
     {
     }
 }

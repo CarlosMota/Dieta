@@ -13,7 +13,7 @@ namespace Dieta.Tabelas
         public WPDataContext(string connectionString) : base(connectionString) 
         { }
 
-        public Table<AlimentoDAO> Alimentos;
+        public Table<Alimento> Alimentos;
 
     }
 }

@@ -11,7 +11,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 
-namespace Dieta
+namespace Dieta 
+ 
 {
     public partial class MainPage : PhoneApplicationPage
     {
@@ -20,18 +21,16 @@ namespace Dieta
         {
             InitializeComponent();
 
-            // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
-            this.Loaded += new RoutedEventHandler(MainPage_Loaded);
+            
+        }
+
+
+        private void CadastrarAlimento_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/CadastroAlimentos.xaml", UriKind.RelativeOrAbsolute));
         }
 
         // Load data for the ViewModel Items
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (!App.ViewModel.IsDataLoaded)
-            {
-                App.ViewModel.LoadData();
-            }
-        }
+        
     }
 }

@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace Dieta.Tabelas
 {
-    class AlimentoDAO : INotifyPropertyChanged, INotifyPropertyChanging
+    public class Alimento : INotifyPropertyChanged, INotifyPropertyChanging
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public event PropertyChangingEventHandler PropertyChanging;
@@ -95,22 +95,7 @@ namespace Dieta.Tabelas
             }
         }
 
-        [Column]
-        private string _lipidios;
-
-        public string Lipidios
-        {
-            get{ return _lipidios;}
-            set
-            {
-                if(_proteinas != value)
-                {
-                    this.NotifyPropertyChanging("Lipideos");
-                    _lipidios = value;
-                    this.NotifyPropertyChanged("Lipideos");
-                }
-            }
-        }
+        
 
         [Column]
         private string _sodio;
@@ -145,6 +130,130 @@ namespace Dieta.Tabelas
                 }
             }
         }
+
+        [Column]
+        private string _gramas;
+
+        public string Gramas
+        {
+            get { return _gramas; }
+            set
+            {
+                if (_gramas != value)
+                {
+                    this.NotifyPropertyChanging("Gramas");
+                    _gramas = value;
+                    this.NotifyPropertyChanged("Gramas");
+                }
+            }
+        }
+
+        [Column]
+        private string _porcao;
+
+        public string Porcao
+        {
+            get { return _porcao; }
+            set
+            {
+                if (_porcao != value)
+                {
+                    this.NotifyPropertyChanging("Porção");
+                    _porcao = value;
+                    this.NotifyPropertyChanged("Porção");
+                }
+            }
+        }
+
+        [Column]
+        private string _gordurasTotais;
+
+        public string GordurasTotais
+        {
+            get { return _gordurasTotais; }
+            set
+            {
+                if (_gordurasTotais != value)
+                {
+                    this.NotifyPropertyChanging("Gorduras Totais");
+                    _gordurasTotais = value;
+                    this.NotifyPropertyChanged("Gorduras Totais");
+                }
+            }
+        }
+
+        [Column]
+        private string _gorduraSaturada;
+
+        public string GorduraSaturadas
+        {
+            get { return _gorduraSaturada; }
+            set
+            {
+                if (_gorduraSaturada != value)
+                {
+                    this.NotifyPropertyChanging("Gordura Saturada");
+                    _gorduraSaturada = value;
+                    this.NotifyPropertyChanged("Gordura Saturada");
+                }
+            }
+        }
+
+        [Column]
+        private string _gorduraTrans;
+
+        public string GorduraSaturada 
+        {
+        
+            get { return _gorduraTrans; }
+            set
+            {
+                if (_gorduraTrans != value)
+                {
+                    this.NotifyPropertyChanging("Gorduras Trans");
+                    _gorduraTrans = value;
+                    this.NotifyPropertyChanged("Gorduras trans");
+                }
+            }
+        }
+
+        [Column]
+        private string _fibras;
+
+        public string Fibra
+        {
+
+            get { return _fibras; }
+            set
+            {
+                if (_fibras != value)
+                {
+                    this.NotifyPropertyChanging("Fibras");
+                    _fibras = value;
+                    this.NotifyPropertyChanged("Fibras");
+                }
+            }
+        }
+
+        [Column]
+        private string _acucar;
+
+        public string Acucar
+        {
+
+            get { return _acucar; }
+            set
+            {
+                if (_acucar != value)
+                {
+                    this.NotifyPropertyChanging("Açúcar");
+                    _acucar = value;
+                    this.NotifyPropertyChanged("Açúcar");
+                }
+            }
+        }
+
+
 
         [Column]
         private string _tipoRefeicao;
