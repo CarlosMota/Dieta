@@ -53,7 +53,7 @@
                     <Button Content="Editar Pefil" HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="198" Margin="122,463,0,0">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/TelaCadastro.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/TelaCadastro.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -71,7 +71,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,-16,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereCafe.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereCafe.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -81,7 +81,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,85,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheManha.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereLancheManha.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -91,7 +91,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,184,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereAlmoco.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereAlmoco.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -101,7 +101,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,284,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheTarde.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereLancheTarde.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -111,7 +111,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,384,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Jantar.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/Jantar.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -121,7 +121,7 @@
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,484,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Ceia.xaml"/>
+                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/Ceia.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>

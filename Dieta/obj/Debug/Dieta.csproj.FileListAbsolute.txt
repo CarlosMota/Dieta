@@ -50,12 +50,12 @@ C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\ja\System.Windows.Interac
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Alimentos.g.cs
-C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Ceia.g.cs
-C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\TabelaNutri.g.cs
-C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\TelaCadastro.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\InsereAlmoco.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\InsereCafe.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\InsereLancheManha.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\InsereLancheTarde.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\Jantar.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Alimentos.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\Ceia.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\TabelaNutri.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\TelaCadastro.g.cs
