@@ -149,17 +149,6 @@
                 </Grid>
             </controls:PivotItem>
 
-            <!--Pivot item Configuração-->
-            <controls:PivotItem Header="Configuração">
-                <!--Triple line list no text wrapping-->
-                <Grid>
-                    <TextBlock TextWrapping="Wrap" Text="Alarmes" Margin="10,33,140,508"/>
-                    <ToggleButton Content="Q" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="347,19,0,0" RenderTransformOrigin="1.571,0.028"/>
-
-                </Grid>
-
-            </controls:PivotItem>
-
         </controls:Pivot>
 
     </Grid>
