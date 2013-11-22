@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    x:Class="Dieta.Alimentos"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="# Dieta" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Alimentos" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button Content="Tabela Nutricional" HorizontalAlignment="Left" Height="72" Margin="107,79,0,0" VerticalAlignment="Top" Width="269">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/TabelaNutri.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+
+        </Grid>
+        <TextBox Height="72" TextWrapping="Wrap" Text="Digite Para Localizar" Margin="0,159,49,376"/>
+        <Button Content="p" HorizontalAlignment="Left" Margin="417,167,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20"/>
+        <TextBox Height="72" TextWrapping="Wrap" Text="Quantidade" Margin="0,10,291,79" Grid.Row="1"/>
+        <TextBox Height="72" TextWrapping="Wrap" Text="Porção (g)" Margin="288,10,3,79" Grid.Row="1"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="72" Margin="189,10,0,0" VerticalAlignment="Top" Width="94" Grid.Row="1"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>
