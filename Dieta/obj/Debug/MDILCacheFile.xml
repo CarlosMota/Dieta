@@ -1,8 +1,8 @@
-﻿<xapCache source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="22/11/2013 18:28:03">
+﻿<xapCache source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="22/11/2013 17:20:09">
   <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="22/11/2013 16:00:53" />
   <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Background.png" archivePath="Background.png" lastWriteTime="22/11/2013 16:00:53" />
   <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="22/11/2013 16:00:53" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.dll" archivePath="Dieta.dll" lastWriteTime="22/11/2013 18:28:01" />
+  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.dll" archivePath="Dieta.dll" lastWriteTime="22/11/2013 17:20:06" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Interactions.dll" archivePath="Microsoft.Expression.Interactions.dll" lastWriteTime="17/08/2011 01:48:22" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="06/07/2012 01:40:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="17/08/2011 01:48:22" />

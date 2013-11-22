@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7AD48F87-1AC9-4345-B8F8-15980AE2A4C1}</ProjectGuid>
+    <ProjectGuid>{895555CD-830C-43FD-BD17-2BC4704B8D58}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -71,19 +71,19 @@
     <Compile Include="Ceia.xaml.cs">
       <DependentUpon>Ceia.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InsereAlmoco.xaml.cs">
+    <Compile Include="Telas\Inserir\InsereAlmoco.xaml.cs">
       <DependentUpon>InsereAlmoco.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InsereCafe.xaml.cs">
+    <Compile Include="Telas\Inserir\InsereCafe.xaml.cs">
       <DependentUpon>InsereCafe.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InsereLancheManha.xaml.cs">
+    <Compile Include="Telas\Inserir\InsereLancheManha.xaml.cs">
       <DependentUpon>InsereLancheManha.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InsereLancheTarde.xaml.cs">
+    <Compile Include="Telas\Inserir\InsereLancheTarde.xaml.cs">
       <DependentUpon>InsereLancheTarde.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Jantar.xaml.cs">
+    <Compile Include="Telas\Inserir\Jantar.xaml.cs">
       <DependentUpon>Jantar.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -112,23 +112,23 @@
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="InsereAlmoco.xaml">
+    <Page Include="Telas\Inserir\InsereAlmoco.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="InsereCafe.xaml">
+    <Page Include="Telas\Inserir\InsereCafe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InsereLancheManha.xaml">
+    <Page Include="Telas\Inserir\InsereLancheManha.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="InsereLancheTarde.xaml">
+    <Page Include="Telas\Inserir\InsereLancheTarde.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Jantar.xaml">
+    <Page Include="Telas\Inserir\Jantar.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
