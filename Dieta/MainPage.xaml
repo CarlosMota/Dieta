@@ -34,21 +34,21 @@
         <controls:Pivot Title="# Dieta" Grid.ColumnSpan="2">
             <!--Pivot item Perfil-->
 
-            <controls:PivotItem Header="Perfil do Usuario">
+            <controls:PivotItem Header="Perfil">
                 <!--Double line list with text wrapping-->
                 <Grid HorizontalAlignment="Left" Width="456">
-                    <TextBlock TextWrapping="Wrap" Text="Peso Inicial" Margin="14,0,310,507" Height="100" VerticalAlignment="Bottom"/>
+                    <TextBlock TextWrapping="Wrap" Text="Peso Inicial" Margin="24,0,300,507" Height="100" VerticalAlignment="Bottom"/>
                     <TextBox Height="72" TextWrapping="Wrap" Text="Kg" Margin="0,28,302,507"/>
                     <TextBlock TextWrapping="Wrap" Margin="306,7,18,527" Text="Peso Desejado"/>
                     <TextBox Height="72" TextWrapping="Wrap" Text="Kg" Margin="292,28,10,507"/>
 
-                    <TextBlock TextWrapping="Wrap" Text="Necessidade Calórica" Margin="14,0,310,369" Height="100" VerticalAlignment="Bottom"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Kg" Margin="0,186,302,349"/>
-                    <TextBlock TextWrapping="Wrap" Margin="306,145,18,389" Text="Meta"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Semanas" Margin="292,186,10,349"/>
+                    <TextBlock TextWrapping="Wrap" Text="Necessidade Calórica" Margin="17,0,307,346" Height="100" VerticalAlignment="Bottom"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Kcal" Margin="0,209,302,326"/>
+                    <TextBlock TextWrapping="Wrap" Margin="306,168,18,366" Text="Meta"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Semanas" Margin="292,209,10,326"/>
 
-                    <TextBlock TextWrapping="Wrap" Margin="160,283,164,251" Text="IMC"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="IMC" Margin="146,324,156,211"/>
+                    <TextBlock TextWrapping="Wrap" Margin="191,317,133,217" Text="IMC"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="IMC" Margin="146,358,156,177"/>
 
                     <Button Content="Editar Pefil" HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="198" Margin="122,463,0,0">
                         <i:Interaction.Triggers>
@@ -67,21 +67,7 @@
 
                     <TextBlock TextWrapping="Wrap" Text="Café da Manhã" Margin="0,0,289,585"/>
                     <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,0,202,585"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,291,0,244"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,-16,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereCafe.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,-16,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereCafe.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,321,0,214"/>
                     <Button Content="p" HorizontalAlignment="Left" Margin="392,-16,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
@@ -89,120 +75,50 @@
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Lanche da Manhã" Margin="0,96,289,475" RenderTransformOrigin="0.5,0.5"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,96,202,489"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,485,0,50"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,80,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
+                    <TextBlock TextWrapping="Wrap" Text="Lanche da Manhã" Margin="0,101,289,470" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,101,202,484"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,521,0,14"/>
+                    <Button Content="p" HorizontalAlignment="Left" Margin="392,85,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ec:NavigateToPageAction TargetPage="/InsereLancheManha.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,80,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheManha.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,80,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheManha.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Almoço" Margin="0,180,289,392"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,181,202,404"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,380,0,155"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,166,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
+                    <TextBlock TextWrapping="Wrap" Text="Almoço" Margin="0,198,289,374"/>
+                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,199,202,386"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,420,0,115"/>
+                    <Button Content="p" HorizontalAlignment="Left" Margin="392,184,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ec:NavigateToPageAction TargetPage="/InsereAlmoco.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,166,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereAlmoco.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,166,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereAlmoco.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Lanche da Tarde" Margin="0,271,289,303" RenderTransformOrigin="0.447,0.381"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,269,202,316"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,203,0,332"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,254,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
+                    <TextBlock TextWrapping="Wrap" Text="Lanche da Tarde" Margin="0,301,289,273" RenderTransformOrigin="0.447,0.381"/>
+                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,299,202,286"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,221,0,314"/>
+                    <Button Content="p" HorizontalAlignment="Left" Margin="392,284,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ec:NavigateToPageAction TargetPage="/InsereLancheTarde.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,254,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheTarde.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,254,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/InsereLancheTarde.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Jantar" Margin="0,363,289,214"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,361,202,224"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,116,0,419"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,344,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
+                    <TextBlock TextWrapping="Wrap" Text="Jantar" Margin="0,403,289,174"/>
+                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,401,202,184"/>
+                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,121,0,414"/>
+                    <Button Content="p" HorizontalAlignment="Left" Margin="392,384,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ec:NavigateToPageAction TargetPage="/Jantar.xaml"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,344,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Jantar.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,344,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Jantar.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Ceia" Margin="0,468,289,110"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,469,202,116"/>
+                    <TextBlock TextWrapping="Wrap" Text="Ceia" Margin="0,504,289,74"/>
+                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,505,202,80"/>
                     <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,22,0,513"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="298,448,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Ceia.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="345,448,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Ceia.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,448,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
+                    <Button Content="p" HorizontalAlignment="Left" Margin="392,484,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ec:NavigateToPageAction TargetPage="/Ceia.xaml"/>
