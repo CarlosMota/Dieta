@@ -98,6 +98,7 @@ namespace Dieta
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+            LerXML();
         }
 
         // Code to execute when the application is launching (eg, from Start)

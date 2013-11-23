@@ -128,7 +128,7 @@
         <shell:ApplicationBar IsVisible="True" 
                               IsMenuEnabled="True" 
                               Opacity="0.9">
-            <shell:ApplicationBarIconButton IconUri="/Dieta;component/Toolkit.Content/ApplicationBar.Check.png"
+            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Check.png"
                                             Text="cadastrar" 
                                             Click="ApplicationBarIconButton_Click"/>
 
