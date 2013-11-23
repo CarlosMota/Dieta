@@ -12,12 +12,36 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.IO.IsolatedStorage;
+using System.IO;
+using Dieta.Classes;
+using System.Xml.Serialization;
 
 namespace Dieta
 {
     public partial class App : Application
     {
         private static MainViewModel viewModel = null;
+        public Usuario Usuario { set; get; }
+        public const String ARQUIVO_USUARIO = "Usuario.xml";
+
+        private void LerXML()
+        {
+            try
+            {
+                using (IsolatedStorageFile myISF = IsolatedStorageFile.GetUserStoreForApplication())
+                {
+                    using (IsolatedStorageFileStream stream = myISF.OpenFile(ARQUIVO_USUARIO, FileMode.Open))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(Usuario));
+                        stream.Position = 0;
+                        Usuario = (Usuario)serializer.Deserialize(stream);
+                    }
+                }
+            }
+            catch (Exception)
+            { }
+        }
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.

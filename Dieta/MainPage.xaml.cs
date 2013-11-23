@@ -28,6 +28,10 @@ namespace Dieta
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            if ((Application.Current as App).Usuario == null)
+            {
+                NavigationService.Navigate(new Uri("/Telas/TelaCadastro.xaml?primeiraVez=true", UriKind.Relative));
+            }
             if (!App.ViewModel.IsDataLoaded)
             {
                 App.ViewModel.LoadData();
