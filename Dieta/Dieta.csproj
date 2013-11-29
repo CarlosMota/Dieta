@@ -56,6 +56,7 @@
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="system.data.linq" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -68,14 +69,35 @@
   <ItemGroup>
     <Compile Include="ClassesAuxiliares\ConversorMeta.cs" />
     <Compile Include="ClassesAuxiliares\ConversorNivelAtividade.cs" />
+    <Compile Include="Classes\Fabricas\FabricaRefeicoes.cs" />
     <Compile Include="Classes\Meta.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
+    <Compile Include="Classes\Refeicoes\classes\Almoco.cs" />
+    <Compile Include="Classes\Refeicoes\classes\Cafe.cs" />
+    <Compile Include="Classes\Refeicoes\classes\Ceia.cs" />
+    <Compile Include="Classes\Refeicoes\classes\Janta.cs" />
+    <Compile Include="Classes\Refeicoes\classes\LancheManha.cs" />
+    <Compile Include="Classes\Refeicoes\classes\LancheTarde.cs" />
+    <Compile Include="Classes\Refeicoes\Dieta.cs" />
+    <Compile Include="Classes\Refeicoes\Refeicao.cs" />
     <Compile Include="Classes\Usuario.cs" />
-    <Compile Include="Telas\TelaCadastro.xaml.cs">
-      <DependentUpon>TelaCadastro.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="DAO\DAOAlimento.cs" />
+    <Compile Include="DAO\DataBaseContext.cs" />
+    <Compile Include="Model\Alimento.cs" />
     <Compile Include="Telas\Alimentos.xaml.cs">
       <DependentUpon>Alimentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\DietaDia.xaml.cs">
+      <DependentUpon>DietaDia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Inserir\InserirAlimento.xaml.cs">
+      <DependentUpon>InserirAlimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\SelecionarAlimento.xaml.cs">
+      <DependentUpon>SelecionarAlimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaCadastro.xaml.cs">
+      <DependentUpon>TelaCadastro.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -113,11 +135,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="Telas\TelaCadastro.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Telas\Alimentos.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\DietaDia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\Inserir\InserirAlimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\SelecionarAlimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TelaCadastro.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Telas\Inserir\Ceia.xaml">
@@ -148,10 +182,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </DesignData>
     <Page Include="Telas\Inserir\TabelaNutri.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,6 +196,9 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\AppBar\appbar.edit.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -173,6 +206,13 @@
     <Content Include="Imagens\Find2.png" />
     <Content Include="Imagens\icon-delete.png" />
     <Content Include="Imagens\icon_check.png" />
+    <Content Include="Imagens\Panorama\1.png" />
+    <Content Include="Imagens\Panorama\2 .png" />
+    <Content Include="Imagens\Panorama\2.png" />
+    <Content Include="Imagens\Panorama\3.png" />
+    <Content Include="Imagens\Panorama\4.png" />
+    <Content Include="Imagens\Panorama\5.png" />
+    <Content Include="Imagens\Panorama\6.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
@@ -182,10 +222,13 @@
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\appbar_check_rest.png" />
+    <Content Include="Imagens\appbar_check_rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagens\iconsAppBar\" />
+    <Folder Include="SampleData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

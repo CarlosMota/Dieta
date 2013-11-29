@@ -16,6 +16,7 @@ using System.IO.IsolatedStorage;
 using System.IO;
 using Dieta.Classes;
 using System.Xml.Serialization;
+using Dieta.Model;
 
 namespace Dieta
 {
@@ -24,6 +25,7 @@ namespace Dieta
         private static MainViewModel viewModel = null;
         public Usuario Usuario { set; get; }
         public const String ARQUIVO_USUARIO = "Usuario.xml";
+
 
         private void LerXML()
         {
@@ -57,6 +59,8 @@ namespace Dieta
 
                 return viewModel;
             }
+
+
         }
 
         /// <summary>
@@ -99,6 +103,13 @@ namespace Dieta
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
             LerXML();
+
+        }
+
+        private void AtualizarAlimentos() 
+        {
+            Alimento objAlimento = new Alimento();
+
         }
 
         // Code to execute when the application is launching (eg, from Start)
@@ -164,7 +175,7 @@ namespace Dieta
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
-            RootFrame = new PhoneApplicationFrame();
+            RootFrame = new TransitionFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Handle navigation failures

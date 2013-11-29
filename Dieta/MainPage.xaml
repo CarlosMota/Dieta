@@ -8,18 +8,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" 
     x:Class="Dieta.MainPage" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
-    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Background="White">
+	<phone:PhoneApplicationPage.Foreground>
+		<SolidColorBrush Color="{StaticResource PhoneBackgroundColor}"/>
+	</phone:PhoneApplicationPage.Foreground>
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar>
+			<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.edit.rest.png" IsEnabled="True" Text="editar"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <!--</ScrollViewer>-->
     <!--<ScrollViewer>-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="467*"/>
@@ -31,122 +37,48 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions> -->
         <!--Pivot Control-->
-        <controls:Pivot Title="# Dieta" Grid.ColumnSpan="2">
+        <controls:Pivot Title="# Dieta" Grid.ColumnSpan="2" Foreground="#FFE66B25" Background="#FFFFFDFD">
             <!--Pivot item Perfil-->
 
-            <controls:PivotItem Header="Perfil">
+            <controls:PivotItem x:Name="PivotPerfil" Header="Perfil">
                 <!--Double line list with text wrapping-->
-                <Grid HorizontalAlignment="Left" Width="456">
-                    <TextBlock TextWrapping="Wrap" Text="Peso Inicial" Margin="24,0,300,507" Height="100" VerticalAlignment="Bottom"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Kg" Margin="0,28,302,507"/>
-                    <TextBlock TextWrapping="Wrap" Margin="306,7,18,527" Text="Peso Desejado"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Kg" Margin="292,28,10,507"/>
-
-                    <TextBlock TextWrapping="Wrap" Text="Necessidade Calórica" Margin="17,0,307,346" Height="100" VerticalAlignment="Bottom"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Kcal" Margin="0,209,302,326"/>
-                    <TextBlock TextWrapping="Wrap" Margin="306,168,18,366" Text="Meta"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Semanas" Margin="292,209,10,326"/>
-
-                    <TextBlock TextWrapping="Wrap" Margin="191,317,133,217" Text="IMC"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="IMC" Margin="146,358,156,177"/>
-
-                    <Button Content="Editar Pefil" HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="198" Margin="122,463,0,0">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/TelaCadastro.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-
-                </Grid>
+                
+                    
             </controls:PivotItem>
 
-            <controls:PivotItem Header="Dieta" Margin="12,28,12,0">
+            <controls:PivotItem x:Name="PivotDieta" Header="Dieta" Margin="12,28,12,0">
                 <!--Triple line list no text wrapping-->
-                <Grid>
-
-                    <TextBlock TextWrapping="Wrap" Text="Café da Manhã" Margin="0,0,289,585"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,0,202,585"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,321,0,214"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,-16,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereCafe.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Lanche da Manhã" Margin="0,101,289,470" RenderTransformOrigin="0.5,0.5"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,101,202,484"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,521,0,14"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,85,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereLancheManha.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Almoço" Margin="0,198,289,374"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,199,202,386"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,420,0,115"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,184,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereAlmoco.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Lanche da Tarde" Margin="0,301,289,273" RenderTransformOrigin="0.447,0.381"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,299,202,286"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,221,0,314"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,284,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/InsereLancheTarde.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Jantar" Margin="0,403,289,174"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,401,202,184"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,121,0,414"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,384,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/Jantar.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-                    <TextBlock TextWrapping="Wrap" Text="Ceia" Margin="0,504,289,74"/>
-                    <TextBlock TextWrapping="Wrap" Text="Hora" Margin="198,505,202,80"/>
-                    <TextBox Height="72" TextWrapping="Wrap" Text="Alimento" Margin="0,22,0,513"/>
-                    <Button Content="p" HorizontalAlignment="Left" Margin="392,484,0,0" VerticalAlignment="Top" Height="62" Width="63" FontSize="20">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ec:NavigateToPageAction TargetPage="/Telas/Inserir/Ceia.xaml"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
-
-
-
-                </Grid>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+						<StackPanel Height="100" Margin="12,12,70,12" Width="224" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="95" Margin="12,0,0,0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
+                                <TextBlock Text="/" FontSize="30"/>
+                                <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="95" Margin="0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
+							</StackPanel>
+                            <TextBlock Text="Kcal/dia" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="100" Width="140" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="20"/>
+                            <TextBlock Text="ml/dia" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="20"/>
+                        </StackPanel>
+                        <ListBox >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,17" Width="432" Height="78">
+                                        
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </StackPanel>
 
             </controls:PivotItem>
             <!--Pivot item Evolução-->
-            <controls:PivotItem Header="Evolução">
+            <controls:PivotItem x:Name="PivotEvolucao" Header="Evolução">
                 <!--Triple line list no text wrapping-->
-                <Grid>
-
-                    <TextBlock TextWrapping="Wrap" Text="Gráfico" Margin="10,30,-10,511"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="223" Stroke="Black" VerticalAlignment="Top" Width="436" Margin="10,71,0,0"/>
-
-                    <Grid>
-                        <TextBlock TextWrapping="Wrap" Text="Fotos Evolução" Margin="10,318,-10,223"/>
-                        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="223" Stroke="Black" VerticalAlignment="Top" Width="436" Margin="10,382,0,0"/>
-
-                    </Grid>
-
-
-                </Grid>
+                
             </controls:PivotItem>
 
         </controls:Pivot>

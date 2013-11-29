@@ -45,81 +45,61 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <ScrollViewer x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel >
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Nome: " 
-                               Margin="9,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <TextBox Name="tBoxNome"
-                        Width="350"/>
+        <ScrollViewer Height="500"  x:Name="ContentPanel"  Grid.Row="1" Margin="10,12,14,97">
+            <StackPanel>
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Nome:" Width="430"/>
+                    <TextBox x:Name="tBoxNome" Width="auto"/>
+                </StackPanel> 
+                
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Sexo: " Width="430"/>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Name="rButtonMasculino" Content="Masculino"/>
+                        <RadioButton Name="rButtonFeminino" Content="Feminino"/>
+                    </StackPanel>   
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Sexo: " 
-                               Margin="9,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <RadioButton Name="rButtonMasculino"
-                                 Margin="20,0,0,0" 
-                                 Content="Masculino"/>
-                    <RadioButton Name="rButtonFeminino"
-                                 Content="Feminino"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Idade: " 
-                               Margin="9,20,0,20"
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <TextBox Name="tBoxIdade"
-                             Width="350" 
-                             InputScope="NumericPassword"
-                             Margin="9,0,0,0"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Peso: " 
-                               Margin="9,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <TextBox Name="tBoxPeso"
-                             Width="350" 
-                             Margin="22,0,0,0"
+                    
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Idade:" Width="430"/>
+                    <TextBox Name="tBoxIdade" 
                              InputScope="NumericPassword"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Altura: " 
-                               Margin="4,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <TextBox Name="tBoxAltura"
-                             Width="350" 
-                             InputScope="NumericPassword"
-                             Margin="10,0,0,0"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Name="sPanelLPickerAtividade">
-                    <TextBlock Text="Nível de atividade: "
-                               Margin="9,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <toolkit:ListPicker Name="lPickerAtividade" 
-                                        Width="200"
-                                        ItemTemplate="{Binding itemLPickerTemplate}"
-                                        FullModeItemTemplate="{StaticResource itemLPickerTemplateModoCheio}"/>
+                
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Peso: " Width="430"/>
+                    <TextBox Name="tBoxPeso"
+                             InputScope="NumericPassword"/>
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Peso desejado:" 
-                               Margin="9,20,0,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
-                    <TextBox Name="tBoxPesoDesejado"
-                             Width="250" 
-                             InputScope="NumericPassword"
-                             Margin="0,0,0,0"/>
+
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Altura:" Width="430"/>
+
+                    <TextBox Name="tBoxAltura" 
+                             InputScope="NumericPassword"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Meta:" 
-                               Margin="9,20,20,20" 
-                               Style="{StaticResource PhoneTextLargeStyle}"/>
+                
+                <StackPanel Name="sPanelLPickerAtividade" Margin="0,12">
+                    <TextBlock Text="Nível de atividade:" Width="430"/>
+                    <toolkit:ListPicker Name="lPickerAtividade" 
+                                        ItemTemplate="{Binding itemLPickerTemplate}"
+                                        FullModeItemTemplate="{StaticResource itemLPickerTemplateModoCheio}"/>
+				</StackPanel>   
+                
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Meta:" Width="430"/>
                     <toolkit:ListPicker Name="lPickerMeta" 
-                                        Width="350"
                                         ItemTemplate="{Binding itemLPickerTemplate}"
                                         FullModeItemTemplate="{StaticResource itemLPickerTemplateModoCheio}"
-                                        Margin="0,0,0,100"/>
+                                        />
                </StackPanel>
+                
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="Peso desejado:" Width="430"/>
+                    <TextBox Name="tBoxPesoDesejado" InputScope="NumericPassword"/>
+                </StackPanel>
+                
             </StackPanel>
         </ScrollViewer>
 </Grid>
