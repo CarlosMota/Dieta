@@ -70,6 +70,7 @@
     <Compile Include="ClassesAuxiliares\ConversorMeta.cs" />
     <Compile Include="ClassesAuxiliares\ConversorNivelAtividade.cs" />
     <Compile Include="Classes\Fabricas\FabricaRefeicoes.cs" />
+    <Compile Include="Classes\Foto.cs" />
     <Compile Include="Classes\Meta.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
     <Compile Include="Classes\Refeicoes\classes\Almoco.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="DAO\DAOAlimento.cs" />
     <Compile Include="DAO\DataBaseContext.cs" />
+    <Compile Include="DAO\DataHelper.cs" />
     <Compile Include="Model\Alimento.cs" />
     <Compile Include="Telas\Alimentos.xaml.cs">
       <DependentUpon>Alimentos.xaml</DependentUpon>

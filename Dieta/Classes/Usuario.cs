@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Text;
 
@@ -7,6 +8,7 @@ namespace Dieta.Classes
 {
     public class Usuario
     {
+        [Table]
         public Usuario(string nome, int idade, char sexo, double peso, double altura,
             NivelDeAtividade nAtividade, double pesoDesejado, Meta meta)
         {

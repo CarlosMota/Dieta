@@ -154,3 +154,4 @@ C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\Inserir\InserirAlim
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\SelecionarAlimento.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Telas\DietaDia.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Assets\AppBar\appbar.edit.rest.png

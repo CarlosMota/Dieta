@@ -39,6 +39,23 @@ namespace Dieta.Model
              }
          }
 
+        [Column(Name = "Desccricao_da_preparacao", CanBeNull = false)]
+        private string _descricaoPreparacao;
+
+        public string DescricaoPreparacao
+        {
+            get { return _descricaoPreparacao; }
+            set
+            {
+                if (_descricaoPreparacao != value)
+                {
+
+                    _descricaoPreparacao = value;
+
+                }
+            }
+        }
+
         [Column(Name = "Calorias", CanBeNull = false)]
          private string _calorias;
  
@@ -71,58 +88,58 @@ namespace Dieta.Model
              }
          }
 
-        [Column(Name = "Gordura Saturada", CanBeNull = true)]
-        private double _gorduraSaturada;
+        [Column(Name = "Gorduras_Totais ", CanBeNull = true)]
+        private string _gorduraTotais;
 
-        public double GorduraSaturada 
+        public string GorduraSaturada 
         {
-            get { return _gorduraSaturada; }
+            get { return _gorduraTotais; }
             set
             {
-                if (_gorduraSaturada != value) 
+                if (_gorduraTotais != value) 
                 {
-                    _gorduraSaturada = value;
+                    _gorduraTotais = value;
                 }
             }
         }
 
-        [Column(Name = "Gordura Trans", CanBeNull = true)]
-        private double _gorduraTrans;
-
-        public double GorduraTrans
-        {
-            get { return _gorduraTrans; }
-            set
-            { _gorduraTrans = value;}
-        }
-
-        [Column(Name = "Sodio", CanBeNull = true)]
-        private double _sodio;
-
-        public double Sodio 
-        {
-            get { return _sodio;}
-        }
-
         [Column(Name = "Carboidratos", CanBeNull = true)]
-        private double _carboidratos;
+        private string _carboidratos;
 
-        public double Carboidratos
+        public string Carboidratos
         {
             get { return _carboidratos; }
             set
-            {_carboidratos = value;}
+            { _carboidratos = value; }
         }
 
-        [Column(Name = "Tipo refeicao", CanBeNull = false)]
-        private double _tipoReifacao;
+        [Column(Name = "Fibra_Alimentar", CanBeNull = true)]
+        private string _fibra_Alimentar;
 
-        public double TipoRefeicao
+        public string Fibra_Alimentar
         {
-            get { return _tipoReifacao; }
-            set
-            { _tipoReifacao = value; }
+            get { return _fibra_Alimentar; }
+            set{ _fibra_Alimentar = value; }
         }
+
+        [Column(Name = "Acucar", CanBeNull = true)]
+        private string _acucar;
+
+        public string Acucar 
+        {
+            get { return _acucar;}
+            set {_acucar = value; }
+        }
+
+        [Column(Name = "Sodio", CanBeNull = true)]
+        private string _sodio;
+
+        public string Sodio
+        {
+            get { return _sodio; }
+            set { _sodio = value; }
+        }
+
 
         [Column(Name = "Deleta", CanBeNull = false)]
         private bool _deleta;

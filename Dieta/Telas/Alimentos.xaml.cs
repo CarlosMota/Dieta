@@ -15,6 +15,8 @@ namespace Dieta.Telas
         public Alimentos()
         {
             InitializeComponent();
+            
+
         }
 
         private void btAdicionar_Click(object sender, System.EventArgs e)

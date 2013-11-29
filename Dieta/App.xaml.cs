@@ -17,6 +17,8 @@ using System.IO;
 using Dieta.Classes;
 using System.Xml.Serialization;
 using Dieta.Model;
+using Dieta.Classes.Fabricas;
+using Dieta.DAO;
 
 namespace Dieta
 {
@@ -24,8 +26,19 @@ namespace Dieta
     {
         private static MainViewModel viewModel = null;
         public Usuario Usuario { set; get; }
+        public FabricaRefeicoes fabrica = new FabricaRefeicoes();
+        public Dieta.Classes.Refeicoes.Dieta dieta;
         public const String ARQUIVO_USUARIO = "Usuario.xml";
+        public static string ConnectionString = "isostore:/MainDB.sdf";
 
+        public DataBaseContext DataBaseContext { get; private set; }
+
+        private void InitializeDataContext() 
+        {
+            DataBaseContext = new DataBaseContext(ConnectionString);
+
+            DataBaseContext.ObjectTrackingEnabled = true;
+        }
 
         private void LerXML()
         {
@@ -49,19 +62,7 @@ namespace Dieta
         /// A static ViewModel used by the views to bind against.
         /// </summary>
         /// <returns>The MainViewModel object.</returns>
-        public static MainViewModel ViewModel
-        {
-            get
-            {
-                // Delay creation of the view model until necessary
-                if (viewModel == null)
-                    viewModel = new MainViewModel();
-
-                return viewModel;
-            }
-
-
-        }
+        
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -102,13 +103,14 @@ namespace Dieta
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+            dieta = new Dieta.Classes.Refeicoes.Dieta(fabrica);
             LerXML();
 
         }
 
-        private void AtualizarAlimentos() 
+        private void AtualizarAlimentos()
         {
-            Alimento objAlimento = new Alimento();
+            Dieta.Model.Alimento objAlimento = new Dieta.Model.Alimento();
 
         }
 
@@ -116,17 +118,19 @@ namespace Dieta
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            InitializeDataContext();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            // Ensure that application state is restored appropriately
-            if (!App.ViewModel.IsDataLoaded)
+            if (e.IsApplicationInstancePreserved == false) 
             {
-                App.ViewModel.LoadData();
+                InitializeDataContext();
             }
+            // Ensure that application state is restored appropriately
+            
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -139,6 +143,7 @@ namespace Dieta
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            DataBaseContext.Dispose();
             // Ensure that required application state is persisted here.
         }
 
