@@ -2,44 +2,52 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.Linq;
-using System.ComponentModel;
 using System.Data.Linq.Mapping;
 using Dieta.DAO;
-
+using System.Data.Linq;
 
 namespace Dieta.Model
 {
-    [Table(Name="Alimento")]
-    public class Alimento 
+    [Table(Name = "Alimento")]
+    public class Alimento
     {
-        private int _id;
 
-        [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true, CanBeNull = false, AutoSync = AutoSync.OnInsert)]
-        public int Id
+        public Alimento()
         {
-            get { return _id; }
-            set { _id = value; }
+            //this._refeicao = default(EntityRef<Refeicao>);
         }
+
+        private int _idAlimento;
+
+        [Column(Name = "IdAlimento", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
+        public int IdAlimento
+        {
+
+            get { return _idAlimento; }
+            set { _idAlimento = value; }
+        }
+
+        [Column(Name = "IdRefeicao")]
+        public int IdRefeicao { get; set; }
 
         private string _descricaoDoAlimento;
 
-        [Column(Name = "Descricao", CanBeNull = false)]
+        [Column(Name = "Descricao_do_Alimento")]
         public string DescricaoDoAlimento
-         {
-             get{ return _descricaoDoAlimento;}
-             set
-             {
-                 if(_descricaoDoAlimento != value)
-                 {
-                     
-                     _descricaoDoAlimento = value;
-                     
-                 }
-             }
-         }
+        {
+            get { return _descricaoDoAlimento; }
+            set
+            {
+                if (_descricaoDoAlimento != value)
+                {
 
-        [Column(Name = "Desccricao_da_preparacao", CanBeNull = false)]
+                    _descricaoDoAlimento = value;
+
+                }
+            }
+        }
+
+        [Column(Name = "Desccricao_da_preparacao")]
         private string _descricaoPreparacao;
 
         public string DescricaoPreparacao
@@ -56,134 +64,164 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Calorias", CanBeNull = false)]
-         private string _calorias;
- 
-         public string Calorias
-         {
-             get{ return _calorias;}
-             set
-             {
-                 if(_calorias != value)
-                 {
-                     
-                     _calorias = value;
-                     
-                 }
-             }
-         }
+        [Column(Name = "Calorias")]
+        private double _calorias;
 
-         [Column(Name = "Proteinas", CanBeNull = false)]
-         private string _proteinas;
+        public double Calorias
+        {
+            get { return _calorias; }
+            set
+            {
+                if (_calorias != value)
+                {
 
-         public string Proteinas
-         {
-             get { return _proteinas; }
-             set
-             {
-                 if (_proteinas != value)
-                 {
-                     _proteinas = value;
-                 }
-             }
-         }
+                    _calorias = value;
 
-        [Column(Name = "Gorduras_Totais ", CanBeNull = true)]
-        private string _gorduraTotais;
+                }
+            }
+        }
 
-        public string GorduraSaturada 
+        [Column(Name = "Proteinas")]
+        private double _proteinas;
+
+        public double Proteinas
+        {
+            get { return _proteinas; }
+            set
+            {
+                if (_proteinas != value)
+                {
+                    _proteinas = value;
+                }
+            }
+        }
+
+        [Column(Name = "Gorduras_Totais ")]
+        private double _gorduraTotais;
+
+        public double GorduraTotais
         {
             get { return _gorduraTotais; }
             set
             {
-                if (_gorduraTotais != value) 
+                if (_gorduraTotais != value)
                 {
                     _gorduraTotais = value;
                 }
             }
         }
 
-        [Column(Name = "Carboidratos", CanBeNull = true)]
-        private string _carboidratos;
+        [Column(Name = "Carboidratos")]
+        private double _carboidratos;
 
-        public string Carboidratos
+        public double Carboidratos
         {
             get { return _carboidratos; }
             set
             { _carboidratos = value; }
         }
 
-        [Column(Name = "Fibra_Alimentar", CanBeNull = true)]
-        private string _fibra_Alimentar;
+        [Column(Name = "Fibra_Alimentar")]
+        private double _fibra_Alimentar;
 
-        public string Fibra_Alimentar
+        public double Fibra_Alimentar
         {
             get { return _fibra_Alimentar; }
-            set{ _fibra_Alimentar = value; }
+            set { _fibra_Alimentar = value; }
         }
 
-        [Column(Name = "Acucar", CanBeNull = true)]
-        private string _acucar;
+        [Column(Name = "Acucar")]
+        private double _acucar;
 
-        public string Acucar 
+        public double Acucar
         {
-            get { return _acucar;}
-            set {_acucar = value; }
+            get { return _acucar; }
+            set { _acucar = value; }
         }
 
-        [Column(Name = "Sodio", CanBeNull = true)]
-        private string _sodio;
+        [Column(Name = "Sodio")]
+        private double _sodio;
 
-        public string Sodio
+        public double Sodio
         {
             get { return _sodio; }
             set { _sodio = value; }
         }
 
 
-        [Column(Name = "Deleta", CanBeNull = false)]
-        private bool _deleta;
+        [Column(Name = "Editavel")]
+        private bool _editavel;
 
-        public bool Deleta
+        public bool Editavel
         {
-            get { return _deleta; }
+            get { return _editavel; }
             set
-            { _deleta = value; }
+            { _editavel = value; }
         }
 
         private bool _realizada;
 
+        [Column(Name = "Realizada", CanBeNull = false)]
         public bool Realizada
         {
             get { return _realizada; }
             set { _realizada = value; }
         }
 
+        /*private EntityRef<Refeicao> _refeicao;
+
+        [Association(Name = "Fk_ListaAlimentos", Storage = "_refeicao", ThisKey = "IdRefeicao", OtherKey = "IdAlimento", IsForeignKey = true)]
+
+        public Refeicao _Refeicao
+        {
+            get { return _refeicao.Entity; }
+            set
+            {
+                Refeicao previousValue = this._refeicao.Entity;
+                if (((previousValue != value) || (this._refeicao.HasLoadedOrAssignedValue == false)))
+                {
+                    if ((previousValue != null))
+                    {
+                        this._refeicao.Entity = null;
+                        previousValue.Alimentos.Remove(this);
+                    }
+                    this._refeicao.Entity = value;
+                    if ((value != null))
+                    {
+                        value.Alimentos.Add(this);
+                        IdRefeicao = value.IdRefeicao;
+                    }
+                    else
+                    {
+                        IdRefeicao = default(int);
+                    }
+                }
+            }
+        }*/
+
         public IEnumerable<Alimento> ObtemAlimento()
         {
-            DAOAlimento daoTarefa = new DAOAlimento();
-            return daoTarefa.ObtemAlimento();
+            DAOAlimento daoAlimento = new DAOAlimento();
+            return daoAlimento.ObtemAlimento();
         }
 
         public bool Gravar()
         {
-            DAOAlimento daoTarefa = new DAOAlimento();
-            return daoTarefa.Gravar(this);
+            DAOAlimento daoAlimento = new DAOAlimento();
+            return daoAlimento.Gravar(this);
         }
 
         public bool Excluir()
         {
-            DAOAlimento daoTarefa = new DAOAlimento();
-            return daoTarefa.Excluir(this);
+            DAOAlimento daoAlimento = new DAOAlimento();
+            return daoAlimento.Excluir(this);
         }
 
         public bool Realizado()
         {
-            DAOAlimento daoTarefa = new DAOAlimento();
-            return daoTarefa.Realizado(this);
+            DAOAlimento daoAlimento = new DAOAlimento();
+            return daoAlimento.Realizado(this);
         }
-
-        
 
     }
 }

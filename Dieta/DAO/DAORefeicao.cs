@@ -6,25 +6,25 @@ using System.Text;
 
 namespace Dieta.DAO
 {
-    public class DAOAlimento
+    public class DAORefeicao
     {
-        public IEnumerable<Alimento> ObtemAlimento()
+        public IEnumerable<Refeicao> ObtemRefeicao()
         {
-            List<Alimento> dados = new List<Alimento>();
+            List<Refeicao> dados = new List<Refeicao>();
             using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
             {
-                dados = (from alimento in db.Alimentos orderby alimento.DescricaoDoAlimento select alimento).ToList();
+                dados = (from refeicao in db.Refeicoes orderby refeicao.Nome select refeicao).ToList();
             }
             return dados;
         }
 
-        public bool Gravar(Alimento novoAliemento)
+        public bool Gravar(Refeicao novaRefeicao)
         {
             try
             {
                 using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
                 {
-                    db.Alimentos.InsertOnSubmit(novoAliemento);
+                    //db.Tarefas.InsertOnSubmit(novaTarefa);
                     db.SubmitChanges();
                 }
                 return true;
@@ -36,14 +36,14 @@ namespace Dieta.DAO
             }
         }
 
-        public bool Excluir(Alimento alimento)
+        public bool Excluir(Refeicao refeicao)
         {
             try
             {
                 using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
                 {
-                    var excluir = db.Alimentos.Where(a => a.IdAlimento == alimento.IdAlimento).First();
-                    db.Alimentos.DeleteOnSubmit(excluir);
+                    var excluir = db.Refeicoes.Where(refe => refe.IdRefeicao == refe.IdRefeicao).First();
+                    db.Refeicoes.DeleteOnSubmit(excluir);
                     db.SubmitChanges();
                 }
                 return true;
@@ -55,15 +55,15 @@ namespace Dieta.DAO
             }
         }
 
-        public bool Realizado(Alimento alimento)
+        public bool Realizado(Refeicao refeicao)
         {
             try
             {
                 using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
                 {
-                    Alimento update = (from amt in db.Alimentos
-                                     where amt.IdAlimento ==alimento.IdAlimento
-                                     select amt).First();
+                    Refeicao update = (from refe in db.Refeicoes
+                                       where refe.IdRefeicao == refeicao.IdRefeicao
+                                       select refe).First();
                     update.Realizada = !update.Realizada;
                     db.SubmitChanges();
                 }

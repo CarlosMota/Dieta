@@ -1,0 +1,219 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Dieta.View.Dieta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <controls:Panorama Title="#dieta" Background="#FFFFFDFD" Foreground="#FFE66B25">
+
+            <!--Panorama item one-->
+            <controls:PanoramaItem x:Name="ItemCafe" Header="Café">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentCafe"  Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/1.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="ListaCafe" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="Lanche">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentLancheManha" Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/2.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="ListaLanche" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Almoço">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentAlmoco" Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/6.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="ListaAlmoco" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Lanche Tarde">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentLanchetarde" Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/3.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="ListaLancheTarde" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Janta">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentJanta" Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/5.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="ListaJanta" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Ceia">
+                <StackPanel Margin="0">
+                    <StackPanel x:Name="ContentCeia" Orientation="Horizontal" Margin="0" Height="100">
+                        <Image Source="/Imagens/Panorama/2.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                            <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Horario}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontWeight="Bold" Foreground="#FF3831DA" FontSize="40"/>
+                            <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <ListBox x:Name="Ceia" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
+                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+        </controls:Panorama>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>

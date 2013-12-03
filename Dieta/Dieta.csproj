@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{895555CD-830C-43FD-BD17-2BC4704B8D58}</ProjectGuid>
+    <ProjectGuid>{981D1F2D-7E40-43F5-8D74-7BDA4E82C85A}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -25,7 +25,6 @@
     <SilverlightAppEntry>Dieta.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,9 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Interactions, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
-    <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
@@ -61,130 +59,67 @@
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
-    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassesAuxiliares\ConversorMeta.cs" />
-    <Compile Include="ClassesAuxiliares\ConversorNivelAtividade.cs" />
-    <Compile Include="Classes\Fabricas\FabricaRefeicoes.cs" />
-    <Compile Include="Classes\Foto.cs" />
-    <Compile Include="Classes\Meta.cs" />
-    <Compile Include="Classes\NivelDeAtividade.cs" />
-    <Compile Include="Classes\Refeicoes\classes\Almoco.cs" />
-    <Compile Include="Classes\Refeicoes\classes\Cafe.cs" />
-    <Compile Include="Classes\Refeicoes\classes\Ceia.cs" />
-    <Compile Include="Classes\Refeicoes\classes\Janta.cs" />
-    <Compile Include="Classes\Refeicoes\classes\LancheManha.cs" />
-    <Compile Include="Classes\Refeicoes\classes\LancheTarde.cs" />
-    <Compile Include="Classes\Refeicoes\Dieta.cs" />
-    <Compile Include="Classes\Refeicoes\Refeicao.cs" />
-    <Compile Include="Classes\Usuario.cs" />
-    <Compile Include="DAO\DAOAlimento.cs" />
-    <Compile Include="DAO\DataBaseContext.cs" />
-    <Compile Include="DAO\DataHelper.cs" />
-    <Compile Include="Model\Alimento.cs" />
-    <Compile Include="Telas\Alimentos.xaml.cs">
-      <DependentUpon>Alimentos.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\DietaDia.xaml.cs">
-      <DependentUpon>DietaDia.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\InserirAlimento.xaml.cs">
-      <DependentUpon>InserirAlimento.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\SelecionarAlimento.xaml.cs">
-      <DependentUpon>SelecionarAlimento.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\TelaCadastro.xaml.cs">
-      <DependentUpon>TelaCadastro.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Inserir\Ceia.xaml.cs">
-      <DependentUpon>Ceia.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\InsereAlmoco.xaml.cs">
-      <DependentUpon>InsereAlmoco.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\InsereCafe.xaml.cs">
-      <DependentUpon>InsereCafe.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\InsereLancheManha.xaml.cs">
-      <DependentUpon>InsereLancheManha.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\InsereLancheTarde.xaml.cs">
-      <DependentUpon>InsereLancheTarde.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Inserir\Jantar.xaml.cs">
-      <DependentUpon>Jantar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Classes\Altura.cs" />
+    <Compile Include="Classes\Calculo.cs" />
+    <Compile Include="Classes\Configuracoes.cs" />
+    <Compile Include="Classes\ConversorMeta.cs" />
+    <Compile Include="Classes\ConversorNivelAtividade.cs" />
+    <Compile Include="Classes\Meta.cs" />
+    <Compile Include="Classes\NivelDeAtividade.cs" />
+    <Compile Include="DAO\DAOAlimento.cs" />
+    <Compile Include="DAO\DAORefeicao.cs" />
+    <Compile Include="DAO\DataBaseContext.cs" />
+    <Compile Include="Fabrica\FabricaRefeicao.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Alimento.cs" />
+    <Compile Include="Model\Refeicao.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\Inserir\TabelaNutri.xaml.cs">
-      <DependentUpon>TabelaNutri.xaml</DependentUpon>
+    <Compile Include="View\CadastroUsuario.xaml.cs">
+      <DependentUpon>CadastroUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\ItemViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="View\Dieta.xaml.cs">
+      <DependentUpon>Dieta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanoramaDieta.xaml.cs">
+      <DependentUpon>PanoramaDieta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Perfil.xaml.cs">
+      <DependentUpon>Perfil.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="Telas\Alimentos.xaml">
+    <Page Include="View\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\DietaDia.xaml">
+    <Page Include="View\CadastroUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\Inserir\InserirAlimento.xaml">
+    <Page Include="View\Dieta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\SelecionarAlimento.xaml">
+    <Page Include="View\PanoramaDieta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\TelaCadastro.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Telas\Inserir\Ceia.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Telas\Inserir\InsereAlmoco.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Telas\Inserir\InsereCafe.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Telas\Inserir\InsereLancheManha.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Telas\Inserir\InsereLancheTarde.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Telas\Inserir\Jantar.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Telas\Inserir\TabelaNutri.xaml">
+    <Page Include="View\Perfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,23 +133,17 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\AppBar\appbar.edit.rest.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Imagens\Find.png" />
-    <Content Include="Imagens\Find2.png" />
-    <Content Include="Imagens\icon-delete.png" />
-    <Content Include="Imagens\icon_check.png" />
-    <Content Include="Imagens\Panorama\1.png" />
-    <Content Include="Imagens\Panorama\2 .png" />
-    <Content Include="Imagens\Panorama\2.png" />
-    <Content Include="Imagens\Panorama\3.png" />
-    <Content Include="Imagens\Panorama\4.png" />
-    <Content Include="Imagens\Panorama\5.png" />
-    <Content Include="Imagens\Panorama\6.png" />
+    <Content Include="Dados\Dados.txt" />
+    <Content Include="Dados\DadosTeste.txt" />
+    <Content Include="Imagens\Refeicoes\1.png" />
+    <Content Include="Imagens\Refeicoes\2.png" />
+    <Content Include="Imagens\Refeicoes\3.png" />
+    <Content Include="Imagens\Refeicoes\4.png" />
+    <Content Include="Imagens\Refeicoes\5.png" />
+    <Content Include="Imagens\Refeicoes\6.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
@@ -223,15 +152,7 @@
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Imagens\appbar_check_rest.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Imagens\iconsAppBar\" />
-    <Folder Include="SampleData\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

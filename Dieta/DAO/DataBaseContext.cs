@@ -1,6 +1,4 @@
-﻿using Dieta.Classes;
-using Dieta.Classes.Refeicoes;
-using Dieta.Model;
+﻿using Dieta.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Linq;
@@ -9,57 +7,37 @@ using System.Text;
 
 namespace Dieta.DAO
 {
-    class DataBaseContext : DataContext
+    public class DataBaseContext : DataContext
     {
-        
+        public static string ConnectionString = "Data Source=isostore:/MainDieta.sdf";
 
-        private Table<Alimento> _alimentos;
-        private Table<Refeicao> _refeicao;
-        private Table<Usuario> _usuario;
-        private Table<Dieta.Classes.Foto> _foto;
+        private Table<Alimento> _alimento;
 
-
-        public Table<Alimento> TAlimentos
+        public Table<Alimento> Alimentos
         {
             get
             {
-                if (_alimentos == null)
-                    _alimentos = GetTable<Alimento>();
+                if (_alimento == null)
+                    _alimento = GetTable<Alimento>();
 
-                return _alimentos;
+                return _alimento;
             }
         }
 
-        public Table<Refeicao> TRefeicao
+        private Table<Refeicao> _refeicao;
+
+        public Table<Refeicao> Refeicoes 
         {
-            get
+            get 
             {
-                if (_refeicao == null)
+                if (_refeicao == null) 
+                {
                     _refeicao = GetTable<Refeicao>();
 
+                   
+                }
+
                 return _refeicao;
-            }
-        }
-
-        public Table<Usuario> TUsuario
-        {
-            get
-            {
-                if (_usuario == null)
-                    _usuario = GetTable<Usuario>();
-
-                return _usuario;
-            }
-        }
-
-        public Table<Foto> TFoto
-        {
-            get
-            {
-                if (_foto == null)
-                    _foto = GetTable<Foto>();
-
-                return _foto;
             }
         }
 
@@ -69,5 +47,6 @@ namespace Dieta.DAO
             if (!this.DatabaseExists())
                 this.CreateDatabase();
         }
+
     }
 }

@@ -12,57 +12,28 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using System.IO.IsolatedStorage;
 using System.IO;
-using Dieta.Classes;
-using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 using Dieta.Model;
-using Dieta.Classes.Fabricas;
-using Dieta.DAO;
+using Dieta.Classes;
+using System.IO.IsolatedStorage;
+using System.Xml.Serialization;
 
 namespace Dieta
 {
     public partial class App : Application
     {
-        private static MainViewModel viewModel = null;
+
         public Usuario Usuario { set; get; }
-        public FabricaRefeicoes fabrica = new FabricaRefeicoes();
-        public Dieta.Classes.Refeicoes.Dieta dieta;
+        //public Alimento alimento;
+        //public Dieta.Classes.Refeicoes.Dieta dieta;
         public const String ARQUIVO_USUARIO = "Usuario.xml";
-        public static string ConnectionString = "isostore:/MainDB.sdf";
-
-        public DataBaseContext DataBaseContext { get; private set; }
-
-        private void InitializeDataContext() 
-        {
-            DataBaseContext = new DataBaseContext(ConnectionString);
-
-            DataBaseContext.ObjectTrackingEnabled = true;
-        }
-
-        private void LerXML()
-        {
-            try
-            {
-                using (IsolatedStorageFile myISF = IsolatedStorageFile.GetUserStoreForApplication())
-                {
-                    using (IsolatedStorageFileStream stream = myISF.OpenFile(ARQUIVO_USUARIO, FileMode.Open))
-                    {
-                        XmlSerializer serializer = new XmlSerializer(typeof(Usuario));
-                        stream.Position = 0;
-                        Usuario = (Usuario)serializer.Deserialize(stream);
-                    }
-                }
-            }
-            catch (Exception)
-            { }
-        }
-
-        /// <summary>
-        /// A static ViewModel used by the views to bind against.
-        /// </summary>
-        /// <returns>The MainViewModel object.</returns>
-        
+        public static string ConnectionString = "Data Source=isostore:/MainDieta1.sdf";
+        //public DataHelper datahelper;
+        public List<String> dadosString = new List<string>();
+        public List<Refeicao> ListaRefeicao;
+        public Refeicao refeicaoSelecionada;
+        public Configuracoes configuracoes;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -87,7 +58,7 @@ namespace Dieta
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                // Display the current frame rate counters
+                // Display the current frame rate counters.
                 Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
@@ -103,34 +74,84 @@ namespace Dieta
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-            dieta = new Dieta.Classes.Refeicoes.Dieta(fabrica);
+
+            
+            popularBanco();
             LerXML();
 
         }
 
-        private void AtualizarAlimentos()
-        {
-            Dieta.Model.Alimento objAlimento = new Dieta.Model.Alimento();
+       
+        
 
+        
+
+        private void LerXML()
+        {
+            try
+            {
+                using (IsolatedStorageFile myISF = IsolatedStorageFile.GetUserStoreForApplication())
+                {
+                    using (IsolatedStorageFileStream stream = myISF.OpenFile(ARQUIVO_USUARIO, FileMode.Open))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(Usuario));
+                        stream.Position = 0;
+                        Usuario = (Usuario)serializer.Deserialize(stream);
+                    }
+                }
+            }
+            catch (Exception)
+            { }
+        }
+
+        private void popularBanco() 
+        {
+            Stream txtStream = Application.GetResourceStream(new Uri("Dados/DadosTeste.txt", UriKind.Relative)).Stream;
+            StreamReader sr = null;
+            int i = 0;
+            sr = new StreamReader(txtStream);
+            string dados = sr.ReadToEnd();
+            dados = dados.Replace("\r\n", "\t");
+            string[] line = Regex.Split(dados, "\t");
+            sr.Close();
+            int cont = 0;
+
+            while (i < line.Length-1)
+            {
+                Alimento novoAlimento = new Alimento();
+
+                novoAlimento.DescricaoDoAlimento = line[i];
+                novoAlimento.DescricaoPreparacao = line[i += 1];
+                novoAlimento.Calorias = double.Parse(line[i += 1]);
+                novoAlimento.Proteinas = double.Parse(line[i += 1]);
+                novoAlimento.GorduraTotais = double.Parse(line[i += 1]);
+                novoAlimento.Carboidratos = double.Parse(line[i += 1]);
+                novoAlimento.Fibra_Alimentar = double.Parse(line[i += 1]);
+                novoAlimento.Sodio = double.Parse(line[i += 1]);
+                novoAlimento.Acucar = double.Parse(line[i += 1]);
+                novoAlimento.Editavel = false;
+                novoAlimento.Realizada = false;
+
+                novoAlimento.Gravar();
+                i++;
+                cont++;
+                
+            }
+
+            
+            
         }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            InitializeDataContext();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            if (e.IsApplicationInstancePreserved == false) 
-            {
-                InitializeDataContext();
-            }
-            // Ensure that application state is restored appropriately
-            
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -143,8 +164,6 @@ namespace Dieta
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
-            DataBaseContext.Dispose();
-            // Ensure that required application state is persisted here.
         }
 
         // Code to execute if a navigation fails
@@ -180,7 +199,7 @@ namespace Dieta
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
-            RootFrame = new TransitionFrame();
+            RootFrame = new PhoneApplicationFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Handle navigation failures
@@ -188,6 +207,23 @@ namespace Dieta
 
             // Ensure we don't initialize again
             phoneApplicationInitialized = true;
+            configuracoes = new Configuracoes();
+            Uri uri;
+            if (configuracoes.existeCadastro("cadastro"))
+            {
+                if (configuracoes.getCadastro("Cadastro").Equals("false"))
+                {
+                    RootFrame.Navigate(new Uri("/View/TelaCadastro.xaml", UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    RootFrame.Navigate(new Uri("/View/Perfil.xaml", UriKind.RelativeOrAbsolute));
+                }
+            }
+            else
+            {
+                RootFrame.Navigate(new Uri("/View/CadastroUsuario.xaml", UriKind.RelativeOrAbsolute));
+            }        
         }
 
         // Do not add any additional code to this method
