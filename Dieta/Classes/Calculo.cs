@@ -37,16 +37,16 @@ namespace Dieta.Classes
             switch (nivelAtividade.ToString()) 
             {
                 case "MUITO_ATIVO":
-                    quantidadeCalorica = 1.725*CalcularTBM(sexo,peso,peso,idade);
+                    quantidadeCalorica = 1.725*CalcularTBM(sexo,altura,peso,idade);
                     break;
                 case "ATIVO":
-                    quantidadeCalorica = 1.65*CalcularTBM(sexo,peso,peso,idade);
+                    quantidadeCalorica = 1.65*CalcularTBM(sexo,altura,peso,idade);
                     break;
                 case "MODERADO":
-                    quantidadeCalorica = 1.375*CalcularTBM(sexo,peso,peso,idade);
+                    quantidadeCalorica = 1.375*CalcularTBM(sexo,altura,peso,idade);
                     break;
                 case "SEDENTARIO":
-                    quantidadeCalorica = 1.2 * CalcularTBM(sexo, peso, peso, idade);
+                    quantidadeCalorica = 1.2 * CalcularTBM(sexo,altura,peso,idade);
                     break;
             }
 

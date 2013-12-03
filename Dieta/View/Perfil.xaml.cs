@@ -41,10 +41,15 @@ namespace Dieta.View
 
         private void ListaRefeicoes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (ListaRefeicoes.SelectedIndex == -1)
+                return;
+
             (Application.Current as App).refeicaoSelecionada =
                 (ListaRefeicoes.Items[ListaRefeicoes.SelectedIndex] as Refeicao);
+           
             NavigationService.Navigate(new Uri("/View/PanoramaDieta.xaml?idRefeicao=" + (Application.Current as App).refeicaoSelecionada.IdRefeicao,
                 UriKind.Relative));
+            ListaRefeicoes.SelectedIndex = -1;
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
