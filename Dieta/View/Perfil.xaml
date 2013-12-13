@@ -117,23 +117,24 @@
             <controls:PivotItem x:Name="PivotEvolucao" Header="Evolução">
                 <!--Triple line list no text wrapping-->
 				<StackPanel>
-					<StackPanel Height="340">
+					<StackPanel Height="260">
 						
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
-                        <ListBox  Height="200" HorizontalAlignment="Left" Name="SavedPhotosList" 
-                                    VerticalAlignment="Top" Width="480" SelectionChanged="SavedPhotosList_SelectionChanged" >
-                            <ListBox.Resources>
-                                <DataTemplate x:Key="ImageTemplate">
-                                    <Border Height="100" Width="150" Padding="5" >
-                                        <Image Source="{Binding Image}"/>
-                                    </Border>
-                                </DataTemplate>
-                            </ListBox.Resources>
-                            <ListBox.ItemTemplate>
-                                <StaticResource ResourceKey="ImageTemplate"/>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
+                    <StackPanel Height="280" Orientation="Vertical" Background="Black" >
+                        <TextBlock Text="Fotos Evolução" Foreground="White" FontWeight="Bold" FontSize="30" Margin="10,10,10,10"/>
+                        <ListBox  Height="210" HorizontalAlignment="Center" Name="SavedPhotosList" 
+                                        VerticalAlignment="Top"  SelectionChanged="SavedPhotosList_SelectionChanged" >
+                                <ListBox.Resources>
+                                    <DataTemplate x:Key="ImageTemplate">
+                                        <Border Height="auto" Width="auto" Padding="5" >
+                                            <Image Source="{Binding}"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.Resources>
+                                <ListBox.ItemTemplate>
+                                    <StaticResource ResourceKey="ImageTemplate"/>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
                     </StackPanel>
 				</StackPanel>
             </controls:PivotItem>
