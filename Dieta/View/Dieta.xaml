@@ -116,7 +116,7 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="Lanche Tarde">
+            <controls:PanoramaItem Header="Lanche">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentLanchetarde" Orientation="Horizontal" Margin="0" Height="100">
                         <Image Source="/Imagens/Panorama/3.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -151,7 +151,7 @@
             <controls:PanoramaItem Header="Janta">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentJanta" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="/Imagens/Panorama/5.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="/Imagens/refeicoes/5.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
@@ -183,7 +183,7 @@
             <controls:PanoramaItem Header="Ceia">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentCeia" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="/Imagens/Panorama/2.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="/Imagens/refeicoes/2.png" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <TextBlock Text="{Binding QuantidadeCalorica}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>

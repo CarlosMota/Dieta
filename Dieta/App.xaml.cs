@@ -18,6 +18,7 @@ using Dieta.Model;
 using Dieta.Classes;
 using System.IO.IsolatedStorage;
 using System.Xml.Serialization;
+using Dieta.DAO;
 
 namespace Dieta
 {
@@ -33,7 +34,9 @@ namespace Dieta
         public List<String> dadosString = new List<string>();
         public List<Refeicao> ListaRefeicao;
         public Refeicao refeicaoSelecionada;
+        public Alimento alimentoSelecionado;
         public Configuracoes configuracoes;
+        public DataBaseContext database;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -76,7 +79,10 @@ namespace Dieta
             }
 
             
-            popularBanco();
+            if (!configuracoes.existeCadastro("cadastro")) 
+            {
+                popularBanco();
+            }
             LerXML();
 
         }
@@ -106,6 +112,7 @@ namespace Dieta
 
         private void popularBanco() 
         {
+            
             Stream txtStream = Application.GetResourceStream(new Uri("Dados/DadosTeste.txt", UriKind.Relative)).Stream;
             StreamReader sr = null;
             int i = 0;
@@ -116,7 +123,7 @@ namespace Dieta
             sr.Close();
             int cont = 0;
 
-            while (i < line.Length-1)
+            while (i < line.Length - 1)
             {
                 Alimento novoAlimento = new Alimento();
 
@@ -135,11 +142,8 @@ namespace Dieta
                 novoAlimento.Gravar();
                 i++;
                 cont++;
-                
-            }
 
-            
-            
+            }
         }
 
         // Code to execute when the application is launching (eg, from Start)

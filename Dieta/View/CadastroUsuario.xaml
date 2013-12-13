@@ -48,12 +48,12 @@
         <!--ContentPanel - place additional content here-->
         <ScrollViewer Height="500"  x:Name="ContentPanel"  Grid.Row="1" Margin="10,12,14,97">
             <StackPanel>
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Nome:" Width="430"/>
                     <TextBox x:Name="tBoxNome" Width="auto"/>
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Sexo: " Width="430"/>
                     <StackPanel Orientation="Horizontal">
                         <RadioButton Name="rButtonMasculino" Content="Masculino"/>
@@ -61,20 +61,20 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Idade:" Width="430"/>
                     <TextBox Name="tBoxIdade" 
                              InputScope="NumericPassword"/>
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Peso: " Width="430"/>
                     <TextBox Name="tBoxPeso"
                              InputScope="NumericPassword"/>
 
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Altura(m):" Width="430"/>
 
                     <TextBox Name="tBoxAltura" 
@@ -88,7 +88,7 @@
                                         FullModeItemTemplate="{StaticResource itemLPickerTemplateModoCheio}"/>
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Meta:" Width="430"/>
                     <toolkit:ListPicker Name="lPickerMeta" 
                                         ItemTemplate="{Binding itemLPickerTemplate}"
@@ -96,7 +96,7 @@
                                         />
                 </StackPanel>
 
-                <StackPanel Margin="0,12">
+                <StackPanel Margin="0,6">
                     <TextBlock Text="Peso desejado:" Width="430"/>
                     <TextBox Name="tBoxPesoDesejado" InputScope="NumericPassword"/>
                 </StackPanel>

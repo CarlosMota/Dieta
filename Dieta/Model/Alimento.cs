@@ -168,6 +168,9 @@ namespace Dieta.Model
             set { _realizada = value; }
         }
 
+
+        public bool Selecionada { get; set; }
+
         /*private EntityRef<Refeicao> _refeicao;
 
         [Association(Name = "Fk_ListaAlimentos", Storage = "_refeicao", ThisKey = "IdRefeicao", OtherKey = "IdAlimento", IsForeignKey = true)]
@@ -198,6 +201,8 @@ namespace Dieta.Model
                 }
             }
         }*/
+
+
 
         public IEnumerable<Alimento> ObtemAlimento()
         {

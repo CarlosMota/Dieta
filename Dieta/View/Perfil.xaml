@@ -13,7 +13,9 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-
+    
+    
+	
     <!--LayoutRoot is the root grid where all page content is placed-->
     
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -31,7 +33,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions> -->
         <!--Pivot Control-->
-        <controls:Pivot Title="# Dieta" Grid.ColumnSpan="2" Foreground="#FFE66B25" Background="#FFFFFDFD">
+        <controls:Pivot Title="# Dieta" Grid.ColumnSpan="2" Foreground="#FFE66B25" Background="#FFFFFDFD" x:Name="Pivot_Main" SelectionChanged="Pivot_Main_SelectionChanged">
             <!--Pivot item Perfil-->
 
             <controls:PivotItem x:Name="PivotPerfil" Header="Perfil">
@@ -90,7 +92,7 @@
                                 <TextBlock Text="ml/dia" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="20"/>
                             </StackPanel>
                     </StackPanel>
-                    <ListBox x:Name="ListaRefeicoes" ItemsSource="{Binding ListaRefeicao}" Height="500"  SelectionChanged="ListaRefeicoes_SelectionChanged">
+                    <ListBox x:Name="ListaRefeicoes" ItemsSource="{Binding ListaRefeicao}" Height="400"  SelectionChanged="ListaRefeicoes_SelectionChanged">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0,0,0,17" Width="432" Height="85" Orientation="Horizontal">
@@ -114,11 +116,42 @@
             <!--Pivot item Evolução-->
             <controls:PivotItem x:Name="PivotEvolucao" Header="Evolução">
                 <!--Triple line list no text wrapping-->
-
+				<StackPanel>
+					<StackPanel Height="340">
+						
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+                        <ListBox  Height="200" HorizontalAlignment="Left" Name="SavedPhotosList" 
+                                    VerticalAlignment="Top" Width="480" SelectionChanged="SavedPhotosList_SelectionChanged" >
+                            <ListBox.Resources>
+                                <DataTemplate x:Key="ImageTemplate">
+                                    <Border Height="100" Width="150" Padding="5" >
+                                        <Image Source="{Binding Image}"/>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <StaticResource ResourceKey="ImageTemplate"/>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+				</StackPanel>
             </controls:PivotItem>
 
         </controls:Pivot>
 
     </Grid>
+    
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar x:Key="appbar1" IsVisible="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.edit.rest.png" IsEnabled="True" Text="Editar" Click="ApplicationBarIconButton_Click"/>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="appbar2" IsVisible="True">
+            <shell:ApplicationBarIconButton IconUri="/Imagens/appbar.feature.camera.rest.png" IsEnabled="True" Text="Tirar" Click="ApplicationBarIconButton_Click_1"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
+
+
 
 </phone:PhoneApplicationPage>

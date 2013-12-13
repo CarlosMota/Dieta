@@ -25,6 +25,7 @@
     <SilverlightAppEntry>Dieta.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,13 +55,16 @@
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="system.data.linq" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
@@ -72,12 +76,24 @@
     <Compile Include="Classes\Configuracoes.cs" />
     <Compile Include="Classes\ConversorMeta.cs" />
     <Compile Include="Classes\ConversorNivelAtividade.cs" />
+    <Compile Include="Classes\ConveterClasses.cs" />
+    <Compile Include="Classes\Fotos\Album.cs" />
+    <Compile Include="Classes\Fotos\Foto.cs" />
+    <Compile Include="Classes\Medida.cs" />
     <Compile Include="Classes\Meta.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
     <Compile Include="DAO\DAOAlimento.cs" />
     <Compile Include="DAO\DAORefeicao.cs" />
     <Compile Include="DAO\DataBaseContext.cs" />
+    <Compile Include="Decorator\DecoratorRefeicao.cs" />
     <Compile Include="Fabrica\FabricaRefeicao.cs" />
+    <Compile Include="Model\Foto.cs" />
+    <Compile Include="View\AdicionarAlimento.xaml.cs">
+      <DependentUpon>AdicionarAlimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastrarAlimento.xaml.cs">
+      <DependentUpon>CadastrarAlimento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -97,12 +113,26 @@
     <Compile Include="View\Perfil.xaml.cs">
       <DependentUpon>Perfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SelecionarAlimentos.xaml.cs">
+      <DependentUpon>SelecionarAlimentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TabelaNutricional.xaml.cs">
+      <DependentUpon>TabelaNutricional.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="View\AdicionarAlimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CadastrarAlimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +153,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SelecionarAlimentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TabelaNutricional.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -133,17 +171,23 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\AppBar\appbar.edit.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Dados\Dados.txt" />
     <Content Include="Dados\DadosTeste.txt" />
+    <Content Include="Imagens\foto.png" />
+    <Content Include="Imagens\iconSearch.png" />
     <Content Include="Imagens\Refeicoes\1.png" />
     <Content Include="Imagens\Refeicoes\2.png" />
     <Content Include="Imagens\Refeicoes\3.png" />
     <Content Include="Imagens\Refeicoes\4.png" />
     <Content Include="Imagens\Refeicoes\5.png" />
     <Content Include="Imagens\Refeicoes\6.png" />
+    <Content Include="Imagens\appbar.feature.camera.rest.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
@@ -152,7 +196,9 @@
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\Refeicoes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
