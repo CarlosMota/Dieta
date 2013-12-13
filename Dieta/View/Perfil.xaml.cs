@@ -21,6 +21,7 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Windows.Navigation;
 
 namespace Dieta.View
 {
@@ -203,6 +204,11 @@ namespace Dieta.View
             
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            NavigationService.RemoveBackEntry();
+        }
 
         private ObservableCollection<Foto> _pics = new ObservableCollection<Foto>();
 

@@ -74,13 +74,11 @@
     <Compile Include="Classes\Altura.cs" />
     <Compile Include="Classes\Calculo.cs" />
     <Compile Include="Classes\Configuracoes.cs" />
-    <Compile Include="Classes\ConversorMeta.cs" />
     <Compile Include="Classes\ConversorNivelAtividade.cs" />
     <Compile Include="Classes\ConveterClasses.cs" />
     <Compile Include="Classes\Fotos\Album.cs" />
     <Compile Include="Classes\Fotos\Foto.cs" />
     <Compile Include="Classes\Medida.cs" />
-    <Compile Include="Classes\Meta.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
     <Compile Include="DAO\DAOAlimento.cs" />
     <Compile Include="DAO\DAORefeicao.cs" />

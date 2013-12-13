@@ -10,7 +10,7 @@ namespace Dieta.Classes
     {
         
         public Usuario(string nome, int idade, char sexo, double peso, double altura,
-            NivelDeAtividade nAtividade, double pesoDesejado, Meta meta)
+            NivelDeAtividade nAtividade, double pesoDesejado)
         {
             Nome = nome;
             Idade = idade;
@@ -19,7 +19,6 @@ namespace Dieta.Classes
             Altura = altura;
             NivelDeAtividade = nAtividade;
             PesoDesejado = pesoDesejado;
-            Meta = meta;
         }
 
         public Usuario()
@@ -38,8 +37,6 @@ namespace Dieta.Classes
         public NivelDeAtividade NivelDeAtividade { set; get; }
 
         public double PesoDesejado { set; get; }
-
-        public Meta Meta { set; get; }
 
     }
 }
