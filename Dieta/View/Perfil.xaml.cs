@@ -21,25 +21,26 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Windows.Navigation;
 
 namespace Dieta.View
 {
     public partial class Perfil : PhoneApplicationPage
     {
         double CaloriasTotais;
-        byte[] imageBits;
         PhotoChooserTask camera;
-        MediaLibrary myMediaLibrary;
         List<Foto> ListaBytesImagens;
         List<BitmapImage> ListaImagens;
-        bool carregado = false;
-
+        //bool carregado = false;
+        //byte[] imageBits;
+        //MediaLibrary myMediaLibrary;
+       
         public Perfil()
         {
             InitializeComponent();
             carregaPerfil();
             camera = new PhotoChooserTask();
-            myMediaLibrary = new MediaLibrary();
+            //myMediaLibrary = new MediaLibrary();
             ListaBytesImagens = new List<Foto>();
             ListaImagens = new List<BitmapImage>();
             this.Loaded += Perfil_Loaded;
@@ -144,6 +145,8 @@ namespace Dieta.View
                 Foto foto = new Foto();
                 foto.imagem = imageBytes;
                 ListaBytesImagens.Add(foto);
+                ListaImagens.Add(image);
+                atualizarLBox();
                 SalvarFoto();
             }
             catch (Exception)
@@ -171,6 +174,7 @@ namespace Dieta.View
 
         private void carregarFotos() 
         {
+            ListaImagens.Clear();
             try 
             {
                 using (IsolatedStorageFile myISF = IsolatedStorageFile.GetUserStoreForApplication())
@@ -182,26 +186,25 @@ namespace Dieta.View
                         ListaBytesImagens = (List<Foto>)serializer.Deserialize(stream);
                     }
                 }
-
-                foreach (Foto foto in ListaBytesImagens) 
+                foreach (Foto foto in ListaBytesImagens)
                 {
                     MemoryStream ms = new MemoryStream(foto.imagem);
                     BitmapImage bi = new BitmapImage();
                     bi.SetSource(ms);
                     ListaImagens.Add(bi);
-                    
                 }
-
                 SavedPhotosList.ItemsSource = ListaImagens;
-
             }catch(Exception)
             {
             
-            }
-            
-            
+            }     
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            NavigationService.RemoveBackEntry();
+        }
 
         private ObservableCollection<Foto> _pics = new ObservableCollection<Foto>();
 
@@ -210,7 +213,11 @@ namespace Dieta.View
             get { return _pics; }
         }
 
-
+        private void atualizarLBox()
+        {
+            SavedPhotosList.ItemsSource = null;
+            SavedPhotosList.ItemsSource = ListaImagens;
+        }
 
 
 
