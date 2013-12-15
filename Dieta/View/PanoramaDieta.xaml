@@ -39,7 +39,7 @@
                         </StackPanel>
 
                     </StackPanel>
-                    <ListBox x:Name="ListaCafe" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                    <ListBox x:Name="ListaCafe" ItemsSource="{Binding}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">

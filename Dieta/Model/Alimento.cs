@@ -130,14 +130,7 @@ namespace Dieta.Model
             set { _fibra_Alimentar = value; }
         }
 
-        [Column(Name = "Acucar")]
-        private double _acucar;
-
-        public double Acucar
-        {
-            get { return _acucar; }
-            set { _acucar = value; }
-        }
+        
 
         [Column(Name = "Sodio")]
         private double _sodio;
@@ -148,6 +141,23 @@ namespace Dieta.Model
             set { _sodio = value; }
         }
 
+        [Column(Name = "GorduraSaturada")]
+        private double _gorduraSaturada;
+
+        public double GorduraSaturada
+        {
+            get { return _gorduraSaturada; }
+            set { _gorduraSaturada = value; }
+        }
+
+        [Column(Name = "GorduraTRANS")]
+        private double _gorduraTrans;
+
+        public double GorduraTrans
+        {
+            get { return _gorduraTrans; }
+            set { _gorduraTrans = value; }
+        }
 
         [Column(Name = "Editavel")]
         private bool _editavel;
@@ -170,6 +180,8 @@ namespace Dieta.Model
 
 
         public bool Selecionada { get; set; }
+
+        
 
         /*private EntityRef<Refeicao> _refeicao;
 

@@ -15,6 +15,7 @@ namespace Dieta.Model
 
         public Refeicao()
         {
+            Alimentos = new List<Alimento>();
             //this._alimento = new EntitySet<Alimento>(new Action<Alimento>(Anexar_Alimento), new Action<Alimento>(Tirar_Alimento));
         }
 
@@ -34,6 +35,8 @@ namespace Dieta.Model
 
         private bool _realizada;
 
+        public string NomeDoArquivo { set; get; } 
+
         //[Column(Name = "Realizada", CanBeNull = false)]
         public bool Realizada
         {
@@ -44,6 +47,8 @@ namespace Dieta.Model
         private BitmapImage _imagem;
 
         public BitmapImage Imagem { get; set; }
+
+        public List<Alimento> Alimentos { set; get; }
 
         /*public IEnumerable<Refeicao> ObtemRefeicoes()
         {

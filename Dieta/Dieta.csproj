@@ -80,12 +80,19 @@
     <Compile Include="Classes\Fotos\Foto.cs" />
     <Compile Include="Classes\Medida.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
+    <Compile Include="DAO\Arquivo.cs" />
     <Compile Include="DAO\DAOAlimento.cs" />
     <Compile Include="DAO\DAORefeicao.cs" />
     <Compile Include="DAO\DataBaseContext.cs" />
     <Compile Include="Decorator\DecoratorRefeicao.cs" />
     <Compile Include="Fabrica\FabricaRefeicao.cs" />
     <Compile Include="Model\Foto.cs" />
+    <Compile Include="Model\Refeicoes\Almoco.cs" />
+    <Compile Include="Model\Refeicoes\Cafe.cs" />
+    <Compile Include="Model\Refeicoes\Ceia.cs" />
+    <Compile Include="Model\Refeicoes\Janta.cs" />
+    <Compile Include="Model\Refeicoes\LancheManha.cs" />
+    <Compile Include="Model\Refeicoes\LancheTarde.cs" />
     <Compile Include="View\AdicionarAlimento.xaml.cs">
       <DependentUpon>AdicionarAlimento.xaml</DependentUpon>
     </Compile>
@@ -176,6 +183,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Dados\Dados.txt" />
+    <Content Include="Dados\Dados2.txt" />
     <Content Include="Dados\DadosTeste.txt" />
     <Content Include="Imagens\foto.png" />
     <Content Include="Imagens\iconSearch.png" />
@@ -194,9 +202,7 @@
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Refeicoes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -37,6 +37,7 @@ namespace Dieta
         public Alimento alimentoSelecionado;
         public Configuracoes configuracoes;
         public DataBaseContext database;
+        
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -135,7 +136,8 @@ namespace Dieta
                 novoAlimento.Carboidratos = double.Parse(line[i += 1]);
                 novoAlimento.Fibra_Alimentar = double.Parse(line[i += 1]);
                 novoAlimento.Sodio = double.Parse(line[i += 1]);
-                novoAlimento.Acucar = double.Parse(line[i += 1]);
+                novoAlimento.GorduraSaturada = double.Parse(line[i += 1]);
+                novoAlimento.GorduraTrans = double.Parse(line[i += 1]);
                 novoAlimento.Editavel = false;
                 novoAlimento.Realizada = false;
 

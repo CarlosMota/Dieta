@@ -14,38 +14,108 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="#Dieta" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="tabela" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28" Grid.ColumnSpan="2">
+            <TextBlock Text="#DIETA" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#FFC64442" FontSize="29.333" FontWeight="Bold"/>
+            <TextBlock Text="nutricional" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FFC64442"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel>
-                <TextBlock Text="Nome do Alimento"/>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="16,0,24,0" >
-                        <TextBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Run Text="Quantidade"/>
-                        </TextBlock>
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Run Text="Porção"/>
-                        </TextBlock>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Grid.ColumnSpan="2">
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="64" Margin="301,48,0,0" VerticalAlignment="Top" Width="145" Background="#FF8AB0F1">
+                <TextBlock HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" FontSize="32" Foreground="White" Margin="6,9,-1,0" Text="gramas" TextAlignment="Center" FontWeight="Bold"/>
+            </Border>
+
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,182,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0">
+        			<Run Text="V"/>
+        			<Run Text="alor energético"/>
+                </TextBlock>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,227,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0">
+        			<Run Text="C"/>
+        			<Run Text="arboidratos"/>
+                </TextBlock>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,272,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Proteinas"/>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,317,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Gorduras Totais"/>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,362,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0">
+        			<Run Text="G"/>
+        			<Run Text="orduras saturadas"/>
+                </TextBlock>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,407,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Gorduras trans"/>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,452,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Sódio"/>
+            </Border>
+            <TextBlock HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="416" FontSize="29.333" Foreground="#FFE68E25" Margin="20,138,0,0" Text="informações nutricionais"/>
+            <TextBlock Name="ValorEnergetico" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,187,0,0" HorizontalAlignment="Left" Width="117" TextAlignment="Center" FontWeight="Bold">
+        		<Run Text="250 kcal"/>
+        		<LineBreak/>
+        		<Run/>
+            </TextBlock>
+            <TextBlock Name="Carboidratos" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,231,0,0" HorizontalAlignment="Left" Width="117" Text="30 g" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Name="Proteinas" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,277,0,0" HorizontalAlignment="Left" Width="117" Text="5 g" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Name="GordurasTotais" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,321,0,0" HorizontalAlignment="Left" Width="117" Text="10 g" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Name="GordurasSaturadas" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,366,0,0" HorizontalAlignment="Left" Width="117" TextAlignment="Center" FontWeight="Bold">
+        		<Run Text="2,9 g"/>
+        		<LineBreak/>
+        		<Run/>
+            </TextBlock>
+            <TextBlock Height="35" Name="GorduraTrans" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,417,0,0" HorizontalAlignment="Left" Width="117" TextAlignment="Center" FontWeight="Bold">
+        		<Run Text="5 g"/>
+        		<LineBreak/>
+        		<Run/>
+            </TextBlock>
+            <TextBlock Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FF1B43B0" Margin="319,456,0,0" HorizontalAlignment="Left" Width="117" FontWeight="Bold">
+        		<Run Text="100 mg"/>
+        		<LineBreak/>
+        		<Run/>
+            </TextBlock>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,452,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Fibras alimentares"/>
+            </Border>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,497,0,0" VerticalAlignment="Top" Width="440" Background="#FFAFC9EC">
+                <TextBlock HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="18.667" Foreground="#FF5A7EB8" Margin="9,9,0,0" Text="Sódio"/>
+            </Border>
+            <TextBlock Height="35" Name="FibraAlimentar" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,457,0,0" HorizontalAlignment="Left" Width="117" TextAlignment="Center" FontWeight="Bold">
+        		<Run Text="8 g"/>
+        		<LineBreak/>
+        		<Run/>
+            </TextBlock>
+            <TextBlock Name="Sodio" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,501,0,0" HorizontalAlignment="Left" Width="117" Text="100 mg" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Name="nomeDoAlimento" HorizontalAlignment="Left" Height="38" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" FontSize="29.333" Text="Arroz" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="1.224,0.809" TextAlignment="Center"/>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="65" Margin="10,48,0,0" VerticalAlignment="Top" Width="271" Background="#FFF5AE58">
+                <TextBox Height="65" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Foreground="White" Margin="9,-1" Text="" TextAlignment="Center" RenderTransformOrigin="0.633,-0.138" FontWeight="Bold"/>
+            </Border>
+            <TextBlock HorizontalAlignment="Left" Height="26" Margin="67,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="#FF782626" Text="Quantidade" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Height="26" Margin="226,112,-55,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="20" Foreground="#FF782626" TextAlignment="Center" Text="Porção" RenderTransformOrigin="0.679,-2.673"/>
+
+        </Grid>
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Add.png" Text="Adicionar" Click="ApplicationBarIconButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -20,14 +20,12 @@ namespace Dieta.View
         {
             InitializeComponent();
             AtualizarAlimento();
-            
         }
 
         private void AtualizarAlimento()
         {
             objAlimento = new Alimento();
-            this.ListaDeAlimentos.ItemsSource = objAlimento.ObtemAlimento();
-            
+            this.ListaDeAlimentos.ItemsSource = objAlimento.ObtemAlimento();    
         }
 
         private void PhoneTextBox_ActionIconTapped(object sender, EventArgs e)
