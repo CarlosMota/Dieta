@@ -35,11 +35,11 @@ namespace Dieta.View
         private void lerRefeicoes()
         {
             ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(0).NomeDoArquivo, ListaRefeicao.ElementAt(0));
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(1).NomeDoArquivo, ListaRefeicao.ElementAt(1));
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(2).NomeDoArquivo, ListaRefeicao.ElementAt(2));
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(3).NomeDoArquivo, ListaRefeicao.ElementAt(3));
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(4).NomeDoArquivo, ListaRefeicao.ElementAt(4));
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(5).NomeDoArquivo, ListaRefeicao.ElementAt(5));
+            ListaLanche.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(1).NomeDoArquivo, ListaRefeicao.ElementAt(1));
+            ListaAlmoco.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(2).NomeDoArquivo, ListaRefeicao.ElementAt(2));
+            ListaLancheTarde.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(3).NomeDoArquivo, ListaRefeicao.ElementAt(3));
+            ListaJanta.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(4).NomeDoArquivo, ListaRefeicao.ElementAt(4));
+            ListaCeia.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(5).NomeDoArquivo, ListaRefeicao.ElementAt(5));
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)

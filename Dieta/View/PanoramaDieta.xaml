@@ -42,14 +42,9 @@
                     <ListBox x:Name="ListaCafe" ItemsSource="{Binding}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -75,14 +70,9 @@
                     <ListBox x:Name="ListaLanche" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -107,14 +97,9 @@
                     <ListBox x:Name="ListaAlmoco" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -139,14 +124,9 @@
                     <ListBox x:Name="ListaLancheTarde" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -171,14 +151,9 @@
                     <ListBox x:Name="ListaJanta" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -200,17 +175,12 @@
                         </StackPanel>
 
                     </StackPanel>
-                    <ListBox x:Name="Ceia" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
+                    <ListBox x:Name="ListaCeia" ItemsSource="{Binding ListaAlimentos}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,17" Width="432" Height="78">
-                                    <TextBlock Text="{Binding Descricao}" Foreground="#FF704E4E" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="12,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,36,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="{Binding Calorias}" Foreground="#FF86B086" Margin="0,24,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                        <TextBlock Text="Kcal" Foreground="#FF86B086" Margin="0,48,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                    </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                    <TextBlock Text="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

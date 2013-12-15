@@ -31,16 +31,12 @@ namespace Dieta.View
         PhotoChooserTask camera;
         List<Foto> ListaBytesImagens;
         List<BitmapImage> ListaImagens;
-        //bool carregado = false;
-        //byte[] imageBits;
-        //MediaLibrary myMediaLibrary;
        
         public Perfil()
         {
             InitializeComponent();
             carregaPerfil();
             camera = new PhotoChooserTask();
-            //myMediaLibrary = new MediaLibrary();
             ListaBytesImagens = new List<Foto>();
             ListaImagens = new List<BitmapImage>();
             this.Loaded += Perfil_Loaded;

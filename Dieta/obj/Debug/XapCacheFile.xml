@@ -1,32 +1,32 @@
-﻿<xapCache source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Dieta.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="15/12/2013 04:23:09">
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Background.png" archivePath="Background.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.dll" archivePath="Dieta.dll" lastWriteTime="15/12/2013 04:23:08" />
+﻿<xapCache source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\Dieta.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="15/12/2013 16:14:12">
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Background.png" archivePath="Background.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.dll" archivePath="Dieta.dll" lastWriteTime="15/12/2013 16:14:11" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="06/07/2012 01:40:16" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="13/12/2013 14:58:09" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Assets\AppBar\appbar.edit.rest.png" archivePath="Assets\AppBar\appbar.edit.rest.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Dados\Dados.txt" archivePath="Dados\Dados.txt" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Dados\Dados2.txt" archivePath="Dados\Dados2.txt" lastWriteTime="15/12/2013 01:05:40" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Dados\DadosTeste.txt" archivePath="Dados\DadosTeste.txt" lastWriteTime="15/12/2013 01:23:28" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\foto.png" archivePath="Imagens\foto.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\iconSearch.png" archivePath="Imagens\iconSearch.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\1.png" archivePath="Imagens\Refeicoes\1.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\2.png" archivePath="Imagens\Refeicoes\2.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\3.png" archivePath="Imagens\Refeicoes\3.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\4.png" archivePath="Imagens\Refeicoes\4.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\5.png" archivePath="Imagens\Refeicoes\5.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\Refeicoes\6.png" archivePath="Imagens\Refeicoes\6.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Imagens\appbar.feature.camera.rest.png" archivePath="Imagens\appbar.feature.camera.rest.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="15/12/2013 04:17:38" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Assets\AppBar\appbar.edit.rest.png" archivePath="Assets\AppBar\appbar.edit.rest.png" lastWriteTime="13/12/2013 14:58:08" />
-  <file source="C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="13/12/2013 14:58:08" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Assets\AppBar\appbar.edit.rest.png" archivePath="Assets\AppBar\appbar.edit.rest.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Dados\Dados.txt" archivePath="Dados\Dados.txt" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Dados\Dados2.txt" archivePath="Dados\Dados2.txt" lastWriteTime="15/12/2013 15:06:24" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Dados\DadosTeste.txt" archivePath="Dados\DadosTeste.txt" lastWriteTime="15/12/2013 15:06:24" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\foto.png" archivePath="Imagens\foto.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\iconSearch.png" archivePath="Imagens\iconSearch.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\1.png" archivePath="Imagens\Refeicoes\1.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\2.png" archivePath="Imagens\Refeicoes\2.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\3.png" archivePath="Imagens\Refeicoes\3.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\4.png" archivePath="Imagens\Refeicoes\4.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\5.png" archivePath="Imagens\Refeicoes\5.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\Refeicoes\6.png" archivePath="Imagens\Refeicoes\6.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Imagens\appbar.feature.camera.rest.png" archivePath="Imagens\appbar.feature.camera.rest.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="15/12/2013 15:08:18" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\Assets\AppBar\appbar.edit.rest.png" archivePath="Assets\AppBar\appbar.edit.rest.png" lastWriteTime="13/12/2013 14:57:07" />
+  <file source="C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="13/12/2013 14:57:07" />
 </xapCache>
