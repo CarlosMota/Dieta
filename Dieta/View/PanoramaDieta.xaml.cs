@@ -42,7 +42,7 @@ namespace Dieta.View
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/View/SelecionarAlimentos.xaml?item="+this.panoramaDieta.SelectedIndex, UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/View/AdicionarAlimento.xaml?item="+this.panoramaDieta.SelectedIndex, UriKind.RelativeOrAbsolute));
         }
     }
 

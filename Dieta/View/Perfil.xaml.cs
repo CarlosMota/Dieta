@@ -44,8 +44,7 @@ namespace Dieta.View
             ListaImagens = new List<BitmapImage>();
             this.Loaded += Perfil_Loaded;
             camera.Completed += camera_Completed;
-            criarAlbum();
-            
+            criarAlbum();           
         }
 
         void Perfil_Loaded(object sender, RoutedEventArgs e)

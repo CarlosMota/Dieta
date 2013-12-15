@@ -41,9 +41,13 @@ namespace Dieta.Model
             set { _realizada = value; }
         }
 
+        public string NomeDoArquivo { set; get; } 
+
         private BitmapImage _imagem;
 
         public BitmapImage Imagem { get; set; }
+
+        public List<Alimento> Alimentos { set; get; }
 
         /*public IEnumerable<Refeicao> ObtemRefeicoes()
         {

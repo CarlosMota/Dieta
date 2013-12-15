@@ -86,3 +86,4 @@ C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\SelecionarAlimentos.
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\CadastrarAlimento.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\AdicionarAlimento.g.cs
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\TabelaNutricional.g.cs
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache

@@ -26,10 +26,11 @@ namespace Dieta
     {
 
         public Usuario Usuario { set; get; }
+        public Refeicao Refeicao { set; get; }
         //public Alimento alimento;
         //public Dieta.Classes.Refeicoes.Dieta dieta;
         public const String ARQUIVO_USUARIO = "Usuario.xml";
-        public static string ConnectionString = "Data Source=isostore:/MainDieta1.sdf";
+        //public static string ConnectionString = "Data Source=isostore:/MainDieta1.sdf";
         //public DataHelper datahelper;
         public List<String> dadosString = new List<string>();
         public List<Refeicao> ListaRefeicao;

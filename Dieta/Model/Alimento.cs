@@ -8,7 +8,7 @@ using System.Data.Linq;
 
 namespace Dieta.Model
 {
-    [Table(Name = "Alimento")]
+    //[Table(Name = "Alimento")]
     public class Alimento
     {
 
@@ -19,7 +19,7 @@ namespace Dieta.Model
 
         private int _idAlimento;
 
-        [Column(Name = "IdAlimento", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
+        //[Column(Name = "IdAlimento", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
         public int IdAlimento
         {
 
@@ -27,12 +27,12 @@ namespace Dieta.Model
             set { _idAlimento = value; }
         }
 
-        [Column(Name = "IdRefeicao")]
+       // [Column(Name = "IdRefeicao")]
         public int IdRefeicao { get; set; }
 
         private string _descricaoDoAlimento;
 
-        [Column(Name = "Descricao_do_Alimento")]
+        //[Column(Name = "Descricao_do_Alimento")]
         public string DescricaoDoAlimento
         {
             get { return _descricaoDoAlimento; }
@@ -47,7 +47,7 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Desccricao_da_preparacao")]
+        //[Column(Name = "Desccricao_da_preparacao")]
         private string _descricaoPreparacao;
 
         public string DescricaoPreparacao
@@ -64,7 +64,7 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Calorias")]
+        //[Column(Name = "Calorias")]
         private double _calorias;
 
         public double Calorias
@@ -81,7 +81,7 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Proteinas")]
+        //[Column(Name = "Proteinas")]
         private double _proteinas;
 
         public double Proteinas
@@ -96,7 +96,7 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Gorduras_Totais ")]
+        //[Column(Name = "Gorduras_Totais ")]
         private double _gorduraTotais;
 
         public double GorduraTotais
@@ -111,7 +111,7 @@ namespace Dieta.Model
             }
         }
 
-        [Column(Name = "Carboidratos")]
+        //[Column(Name = "Carboidratos")]
         private double _carboidratos;
 
         public double Carboidratos
@@ -121,7 +121,7 @@ namespace Dieta.Model
             { _carboidratos = value; }
         }
 
-        [Column(Name = "Fibra_Alimentar")]
+        //[Column(Name = "Fibra_Alimentar")]
         private double _fibra_Alimentar;
 
         public double Fibra_Alimentar
@@ -130,7 +130,7 @@ namespace Dieta.Model
             set { _fibra_Alimentar = value; }
         }
 
-        [Column(Name = "Acucar")]
+        //[Column(Name = "Acucar")]
         private double _acucar;
 
         public double Acucar
@@ -139,7 +139,7 @@ namespace Dieta.Model
             set { _acucar = value; }
         }
 
-        [Column(Name = "Sodio")]
+        //[Column(Name = "Sodio")]
         private double _sodio;
 
         public double Sodio
@@ -149,7 +149,7 @@ namespace Dieta.Model
         }
 
 
-        [Column(Name = "Editavel")]
+        //[Column(Name = "Editavel")]
         private bool _editavel;
 
         public bool Editavel
@@ -161,7 +161,7 @@ namespace Dieta.Model
 
         private bool _realizada;
 
-        [Column(Name = "Realizada", CanBeNull = false)]
+        //[Column(Name = "Realizada", CanBeNull = false)]
         public bool Realizada
         {
             get { return _realizada; }

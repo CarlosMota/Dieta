@@ -1,5 +1,6 @@
 ﻿using Dieta.Classes;
 using Dieta.Model;
+using Dieta.Model.Refeicoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,13 +27,43 @@ namespace Dieta.Fabrica
 
         public static Refeicao criarRefeicao(string nome, string horario, string caminhoImagem, double QuantidadeCaloricaTotal, int IdRefeicao) 
         {
-            Refeicao refe = new Refeicao();
+            Refeicao refe = escolherRefeicao(IdRefeicao);
             refe.Nome = nome;
             refe.Horario = horario;
             refe.Imagem = new System.Windows.Media.Imaging.BitmapImage(new Uri(caminhoImagem,UriKind.RelativeOrAbsolute));
             refe.QuantidadeCaloricaDaRefeicaoTotal = Calculo.calculoQuantidadeCaloricaPorRefeicao(IdRefeicao, QuantidadeCaloricaTotal);
+            refe.NomeDoArquivo = refe.Nome + ".xml";
             refe.IdRefeicao = IdRefeicao;
             return refe;
+        }
+
+        private static Refeicao escolherRefeicao(int IdRefeicao)
+        {
+            Refeicao refeicao = null;
+            switch (IdRefeicao) 
+            {
+                case 0:
+                    refeicao = new Cafe();
+                    break;
+                case 1:
+                    refeicao = new LancheManha();
+                    break;
+                case 2:
+                    refeicao = new Almoco();
+                    break;
+                case 3:
+                    refeicao = new LancheTarde();
+                    break;
+                case 4:
+                    refeicao = new Janta();
+                    break;
+                case 5:
+                    refeicao = new Ceia();
+                    break;     
+            }
+
+            return refeicao;
+
         }
     }
 }
