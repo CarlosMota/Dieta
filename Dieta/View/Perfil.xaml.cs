@@ -22,6 +22,7 @@ using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Windows.Navigation;
+using Microsoft.Phone.Scheduler;
 
 namespace Dieta.View
 {
@@ -42,13 +43,38 @@ namespace Dieta.View
             this.Loaded += Perfil_Loaded;
             camera.Completed += camera_Completed;
             criarAlbum();
-            
+        }
+
+        private void alarmes()
+        {
+            IEnumerable<ScheduledNotification> notifications = ScheduledActionService.GetActions<ScheduledNotification>();
+            if (notifications.Count<ScheduledNotification>() == 0)
+            {
+                List<Refeicao> listaRefeicao = (Application.Current as App).ListaRefeicao;
+                for (int i = 0; i < listaRefeicao.Count(); i++)
+                {
+                    Refeicao refeicao = listaRefeicao.ElementAt(i);
+                    String name = System.Guid.NewGuid().ToString();
+                    Reminder reminder = new Reminder(i.ToString());
+                    reminder.Title = refeicao.Nome;
+                    reminder.Content = refeicao.Horario;
+                    DateTime tempo = new DateTime();
+                    tempo = ConverterHorario.converter(refeicao.Horario);
+                    reminder.BeginTime = tempo;
+                    reminder.ExpirationTime = tempo.AddYears(10);
+                    reminder.RecurrenceType = RecurrenceInterval.Daily;
+                    reminder.NavigationUri = new Uri("/View/PanoramaDieta.xaml?idRefeicao=" + i, UriKind.Relative);
+                    ScheduledActionService.Add(reminder);
+                }
+            }
         }
 
         void Perfil_Loaded(object sender, RoutedEventArgs e)
         {
             ListaRefeicoes.ItemsSource = (Application.Current as App).ListaRefeicao;
             carregarFotos();
+            alarmes();
+ 
         }
 
         private void ListaRefeicoes_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -121,12 +147,10 @@ namespace Dieta.View
             txtPesoInicial.Text = "" + (Application.Current as App).Usuario.Peso;
             TxtObjetivo.Text = "" + (Application.Current as App).Usuario.PesoDesejado;
             TxtIMC.Text = "" + Calculo.CalcularIMC((Application.Current as App).Usuario.Altura, (Application.Current as App).Usuario.Peso);
-            CaloriasTotais = Calculo.caluloCalorias((Application.Current as App).Usuario.Sexo, (Application.Current as App).Usuario.Altura, (Application.Current as App).Usuario.Peso, (Application.Current as App).Usuario.Idade, (Application.Current as App).Usuario.NivelDeAtividade);
+            CaloriasTotais = (Application.Current as App).CaloriasTotais;
             txtCalorias.Text = "" + CaloriasTotais;
             txtCaloriaTotal.Text = "" + CaloriasTotais;
             txtQuantidadeAgua.Text = "" + Calculo.calculoConsumoAgua((Application.Current as App).Usuario.Peso, CaloriasTotais);
-            (Application.Current as App).ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
-
         }
 
         void camera_Completed(object sender, PhotoResult e)

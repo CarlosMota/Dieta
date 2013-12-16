@@ -5,25 +5,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Phone.Scheduler;
 
 namespace Dieta.Fabrica
 {
     public class FabricaRefeicao
     {
 
-        
-
         public static List<Refeicao> criarRefeicoes(double QuantidadeCaloricaTotal)
         {
             List<Refeicao> ListaRefeicoes = new List<Refeicao>();
-
-            ListaRefeicoes.Add(criarRefeicao("Café", "06:30", "/Imagens/Refeicoes/1.png", QuantidadeCaloricaTotal, 0));
-            ListaRefeicoes.Add(criarRefeicao("Lanche da Manhã", "09:30", "/Imagens/Refeicoes/2.png", QuantidadeCaloricaTotal, 1));
-            ListaRefeicoes.Add(criarRefeicao("Almoço", "12:30", "/Imagens/Refeicoes/3.png", QuantidadeCaloricaTotal, 2));
-            ListaRefeicoes.Add(criarRefeicao("Lanche da Tarde", "15:30", "/Imagens/Refeicoes/4.png", QuantidadeCaloricaTotal, 3));
-            ListaRefeicoes.Add(criarRefeicao("Janta", "18:30", "/Imagens/Refeicoes/5.png", QuantidadeCaloricaTotal, 4));
-            ListaRefeicoes.Add(criarRefeicao("Ceia", "21:30", "/Imagens/Refeicoes/6.png", QuantidadeCaloricaTotal, 5));
-
+            string[] horarios = { "06:30", "09:30", "12:30", "15:30", "18:30", "21:30" };
+            List<ScheduledNotification> lista = ScheduledActionService.GetActions<ScheduledNotification>().ToList();
+            if (ScheduledActionService.GetActions<ScheduledNotification>().Count<ScheduledNotification>() > 0){
+                horarios =  new string[6];
+                for (int i = 0; i < 6; i++)
+                    horarios[i] = ConverterHorario.converter(ScheduledActionService.Find(i.ToString()).BeginTime);
+            }
+            ListaRefeicoes.Add(criarRefeicao("Café", horarios[0], "/Imagens/Refeicoes/1.png", QuantidadeCaloricaTotal, 0));
+            ListaRefeicoes.Add(criarRefeicao("Lanche da Manhã", horarios[1], "/Imagens/Refeicoes/2.png", QuantidadeCaloricaTotal, 1));
+            ListaRefeicoes.Add(criarRefeicao("Almoço", horarios[2], "/Imagens/Refeicoes/3.png", QuantidadeCaloricaTotal, 2));
+            ListaRefeicoes.Add(criarRefeicao("Lanche da Tarde", horarios[3], "/Imagens/Refeicoes/4.png", QuantidadeCaloricaTotal, 3));
+            ListaRefeicoes.Add(criarRefeicao("Janta", horarios[4], "/Imagens/Refeicoes/5.png", QuantidadeCaloricaTotal, 4));
+            ListaRefeicoes.Add(criarRefeicao("Ceia", horarios[5], "/Imagens/Refeicoes/6.png", QuantidadeCaloricaTotal, 5));
             return ListaRefeicoes;
         }
 
@@ -45,7 +49,7 @@ namespace Dieta.Fabrica
             switch (IdRefeicao)
             {
                 case 0:
-                    refeicao = new Dieta.Model.Refeicoes.Cafe();
+                    refeicao = new Cafe();
                     break;
                 case 1:
                     refeicao = new LancheManha();

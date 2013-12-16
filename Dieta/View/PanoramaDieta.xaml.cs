@@ -12,6 +12,8 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Dieta.Model;
 using Dieta.DAO;
+using Microsoft.Phone.Scheduler;
+using Dieta.Classes;
 
 namespace Dieta.View
 {
@@ -56,6 +58,32 @@ namespace Dieta.View
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/View/AdicionarAlimento.xaml?item="+this.panoramaDieta.SelectedIndex, UriKind.RelativeOrAbsolute));
+        }
+
+        private void ttp_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario = ConverterHorario.converter((DateTime)e.NewDateTime);
+            IEnumerable<ScheduledNotification> reminders = ScheduledActionService.GetActions<ScheduledNotification>();
+            for (int i = 0; i < reminders.Count(); i++)
+            {
+                if (reminders.ElementAt(i).Title == ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Nome)
+                {
+                    reminders.ElementAt(i).BeginTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, ((DateTime)e.NewDateTime).Hour, ((DateTime)e.NewDateTime).Minute, 0);
+                    reminders.ElementAt(i).Content = ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario;
+                    ScheduledActionService.Replace(reminders.ElementAt(i));
+                }
+            }
+            atualizarPanorama();
+        }
+
+        private void atualizarPanorama()
+        {
+            PanoramaItem[] items = { ItemCafe, itemLanche, itemAlmoco, itemLancheTarde, itemJanta, itemCeia };
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i].DataContext = null;
+                items[i].DataContext = ListaRefeicao.ElementAt(i);
+            }
         }
     }
 

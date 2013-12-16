@@ -75,6 +75,7 @@
     <Compile Include="Classes\Calculo.cs" />
     <Compile Include="Classes\Configuracoes.cs" />
     <Compile Include="Classes\ConversorNivelAtividade.cs" />
+    <Compile Include="Classes\ConverterHorario.cs" />
     <Compile Include="Classes\ConveterClasses.cs" />
     <Compile Include="Classes\Fotos\Album.cs" />
     <Compile Include="Classes\Fotos\Foto.cs" />

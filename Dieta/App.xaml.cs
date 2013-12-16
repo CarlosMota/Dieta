@@ -37,7 +37,7 @@ namespace Dieta
         public Alimento alimentoSelecionado;
         public Configuracoes configuracoes;
         public DataBaseContext database;
-        
+        public double CaloriasTotais;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -85,7 +85,8 @@ namespace Dieta
                 popularBanco();
             }
             LerXML();
-
+            CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.Idade, Usuario.NivelDeAtividade);
+            ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
         }
 
        
