@@ -62,21 +62,21 @@ namespace Dieta.View
 
         private void ttp_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
         {
-            ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario = ConverterHorario.converter((DateTime)e.NewDateTime);
-            IEnumerable<ScheduledNotification> reminders = ScheduledActionService.GetActions<ScheduledNotification>();
-            for (int i = 0; i < reminders.Count(); i++)
-            {
-                if (reminders.ElementAt(i).Title == ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Nome)
-                {
-                    reminders.ElementAt(i).BeginTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, ((DateTime)e.NewDateTime).Hour, ((DateTime)e.NewDateTime).Minute, 0);
-                    reminders.ElementAt(i).Content = ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario;
-                    ScheduledActionService.Replace(reminders.ElementAt(i));
-                }
-            }
-            atualizarPanorama();
+            ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario = MetodosTempo.DateTimeToString((DateTime)e.NewDateTime);
+            Configuracoes configuracoes = new Configuracoes();
+            if (configuracoes.IsReminderRefeicaoOn())
+                ProgramarReminders((DateTime)e.NewDateTime);
+            configuracoes.SetHorarioReminderRefeicao(ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Nome, ListaRefeicao.ElementAt(panoramaDieta.SelectedIndex).Horario);
+            AtualizarPanorama();
         }
 
-        private void atualizarPanorama()
+        private void ProgramarReminders(DateTime newDateTime)
+        {
+            NotificadorRefeicao nRefeicao = new NotificadorRefeicao();
+            nRefeicao.AtualizarRemindersRefeicao(ListaRefeicao);
+        }
+
+        private void AtualizarPanorama()
         {
             PanoramaItem[] items = { ItemCafe, itemLanche, itemAlmoco, itemLancheTarde, itemJanta, itemCeia };
             for (int i = 0; i < items.Length; i++)

@@ -18,7 +18,6 @@ namespace Dieta.View
     public partial class CadastroUsuario : PhoneApplicationPage
     {
 
-        string[] Metas;
         string[] NiveisAtividade;
         
 
@@ -29,12 +28,12 @@ namespace Dieta.View
             NiveisAtividade = conversorNivel.VetorStringNiveisDeAtividade();
             this.lPickerAtividade.ItemsSource = NiveisAtividade;
             if ((Application.Current as App).Usuario != null)
-                preencher();
+                Preencher();
             else
                 ApplicationBar.Buttons.RemoveAt(1);
         }
 
-        private void preencher()
+        private void Preencher()
         {
                 Usuario usuario = (Application.Current as App).Usuario;
                 tBoxNome.Text = usuario.Nome;
@@ -70,7 +69,8 @@ namespace Dieta.View
             (Application.Current as App).Usuario = new Usuario(nome, idade, sexo, peso, altura, nAtividade, pDesejado);
             if (SalvarXML())
             {
-                (Application.Current as App).configuracoes.setLogin("cadastro", "true");
+                InicializarApp();
+                ConfigurarReminders();
                 MessageBox.Show("Dados cadastrados/atualizados com sucesso");
                 if (NavigationService.BackStack.Count() > 0)
                     NavigationService.GoBack();
@@ -78,6 +78,33 @@ namespace Dieta.View
                     NavigationService.Navigate(new Uri("/View/Perfil.xaml", UriKind.Relative));
             }
         }
+
+        private void ConfigurarReminders()
+        {
+            NotificadorAgua nAgua = new NotificadorAgua();
+            Configuracoes configuracoes = new Configuracoes();
+            if (configuracoes.IsReminderAguaOn())
+            {
+                if (!nAgua.RemindersAguaConfigurados())
+                    nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
+                else
+                    nAgua.AtualizarRemindersAgua((Application.Current as App).Usuario.Peso);
+            }
+            NotificadorRefeicao nRefeicao = new NotificadorRefeicao();
+            if (configuracoes.IsReminderRefeicaoOn())
+            {
+                if (!nRefeicao.RemindersRefeicaoConfigurados())
+                    nRefeicao.CriarRemindersRefeicao((Application.Current as App).ListaRefeicao);
+            }
+        }
+
+        private void InicializarApp()
+        {
+                (Application.Current as App).configuracoes.setLogin("cadastro", "true");
+                Usuario usuario = (Application.Current as App).Usuario;
+                (Application.Current as App).CaloriasTotais = Calculo.caluloCalorias(usuario.Sexo, usuario.Altura, usuario.Peso, usuario.Idade, usuario.NivelDeAtividade);
+                (Application.Current as App).ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes((Application.Current as App).CaloriasTotais);
+         }
 
         private bool SalvarXML()
         {

@@ -75,12 +75,14 @@
     <Compile Include="Classes\Calculo.cs" />
     <Compile Include="Classes\Configuracoes.cs" />
     <Compile Include="Classes\ConversorNivelAtividade.cs" />
-    <Compile Include="Classes\ConverterHorario.cs" />
+    <Compile Include="Classes\MetodosTempo.cs" />
     <Compile Include="Classes\ConveterClasses.cs" />
     <Compile Include="Classes\Fotos\Album.cs" />
     <Compile Include="Classes\Fotos\Foto.cs" />
     <Compile Include="Classes\Medida.cs" />
     <Compile Include="Classes\NivelDeAtividade.cs" />
+    <Compile Include="Classes\NotificadorAgua.cs" />
+    <Compile Include="Classes\NotificadorRefeicao.cs" />
     <Compile Include="DAO\Arquivo.cs" />
     <Compile Include="DAO\DAOAlimento.cs" />
     <Compile Include="DAO\DAORefeicao.cs" />

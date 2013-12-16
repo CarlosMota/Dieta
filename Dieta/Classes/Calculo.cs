@@ -54,9 +54,9 @@ namespace Dieta.Classes
             
         }
 
-        public static double calculoConsumoAgua(double peso, double caloria) 
+        public static double calculoConsumoAgua(double peso) 
         {
-            return peso/0.035;
+            return 33*peso;
         }
 
         public static double calculoQuantidadeCaloricaPorRefeicao(int refeicao,double quantidadeCaloricaTotal) 

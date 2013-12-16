@@ -19,6 +19,8 @@ using Dieta.Classes;
 using System.IO.IsolatedStorage;
 using System.Xml.Serialization;
 using Dieta.DAO;
+using Microsoft.Phone.Scheduler;
+using System.Diagnostics;
 
 namespace Dieta
 {
@@ -77,24 +79,29 @@ namespace Dieta
                 // Caution:- Use this under debug mode only. Application that disables user idle detection will continue to run
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
-            }
-
-            
+            }            
             if (!configuracoes.existeCadastro("cadastro")) 
             {
                 popularBanco();
+                ConfiguracoesIniciais();
             }
-            LerXML();
-            CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.Idade, Usuario.NivelDeAtividade);
-            ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
+            if (LerXML())
+            {
+                CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.Idade, Usuario.NivelDeAtividade);
+                ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
+            }
         }
 
-       
-        
+        private void ConfiguracoesIniciais()
+        {
+            configuracoes.SetReminderAguaOn(true);
+            configuracoes.SetReminderRefeicaoOn(true);
+            configuracoes.SetHorarioInicioAgua("08:53");
+            configuracoes.SetHorarioFimAgua("22:00");
+            configuracoes.SetIntervaloAgua("01:00");
+        }        
 
-        
-
-        private void LerXML()
+        private bool LerXML()
         {
             try
             {
@@ -107,9 +114,12 @@ namespace Dieta
                         Usuario = (Usuario)serializer.Deserialize(stream);
                     }
                 }
+                return true;
             }
             catch (Exception)
-            { }
+            {
+                return false;
+            }
         }
 
         private void popularBanco() 

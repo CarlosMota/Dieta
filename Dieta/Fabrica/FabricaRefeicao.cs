@@ -16,18 +16,25 @@ namespace Dieta.Fabrica
         {
             List<Refeicao> ListaRefeicoes = new List<Refeicao>();
             string[] horarios = { "06:30", "09:30", "12:30", "15:30", "18:30", "21:30" };
-            List<ScheduledNotification> lista = ScheduledActionService.GetActions<ScheduledNotification>().ToList();
-            if (ScheduledActionService.GetActions<ScheduledNotification>().Count<ScheduledNotification>() > 0){
-                horarios =  new string[6];
+            string[] nomes = {"Café", "Lanche da Manhã", "Almoço", "Lanche da Tarde", "Janta", "Ceia"};
+            Configuracoes configuracoes = new Configuracoes();
+            if (configuracoes.GetHorarioReminderRefeicao(nomes[0]) != null)
+            {
+                horarios = new string[6];
                 for (int i = 0; i < 6; i++)
-                    horarios[i] = ConverterHorario.converter(ScheduledActionService.Find(i.ToString()).BeginTime);
+                    horarios[i] = configuracoes.GetHorarioReminderRefeicao(nomes[i]);
             }
-            ListaRefeicoes.Add(criarRefeicao("Café", horarios[0], "/Imagens/Refeicoes/1.png", QuantidadeCaloricaTotal, 0));
-            ListaRefeicoes.Add(criarRefeicao("Lanche da Manhã", horarios[1], "/Imagens/Refeicoes/2.png", QuantidadeCaloricaTotal, 1));
-            ListaRefeicoes.Add(criarRefeicao("Almoço", horarios[2], "/Imagens/Refeicoes/3.png", QuantidadeCaloricaTotal, 2));
-            ListaRefeicoes.Add(criarRefeicao("Lanche da Tarde", horarios[3], "/Imagens/Refeicoes/4.png", QuantidadeCaloricaTotal, 3));
-            ListaRefeicoes.Add(criarRefeicao("Janta", horarios[4], "/Imagens/Refeicoes/5.png", QuantidadeCaloricaTotal, 4));
-            ListaRefeicoes.Add(criarRefeicao("Ceia", horarios[5], "/Imagens/Refeicoes/6.png", QuantidadeCaloricaTotal, 5));
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                    configuracoes.SetHorarioReminderRefeicao(nomes[i], horarios[i]);
+            }
+            ListaRefeicoes.Add(criarRefeicao(nomes[0], horarios[0], "/Imagens/Refeicoes/1.png", QuantidadeCaloricaTotal, 0));
+            ListaRefeicoes.Add(criarRefeicao(nomes[1], horarios[1], "/Imagens/Refeicoes/2.png", QuantidadeCaloricaTotal, 1));
+            ListaRefeicoes.Add(criarRefeicao(nomes[2], horarios[2], "/Imagens/Refeicoes/3.png", QuantidadeCaloricaTotal, 2));
+            ListaRefeicoes.Add(criarRefeicao(nomes[3], horarios[3], "/Imagens/Refeicoes/4.png", QuantidadeCaloricaTotal, 3));
+            ListaRefeicoes.Add(criarRefeicao(nomes[4], horarios[4], "/Imagens/Refeicoes/5.png", QuantidadeCaloricaTotal, 4));
+            ListaRefeicoes.Add(criarRefeicao(nomes[5], horarios[5], "/Imagens/Refeicoes/6.png", QuantidadeCaloricaTotal, 5));
             return ListaRefeicoes;
         }
 
