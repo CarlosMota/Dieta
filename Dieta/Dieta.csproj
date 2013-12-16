@@ -102,6 +102,9 @@
     <Compile Include="View\CadastrarAlimento.xaml.cs">
       <DependentUpon>CadastrarAlimento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfiguracoesTela.xaml.cs">
+      <DependentUpon>ConfiguracoesTela.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CadastrarAlimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfiguracoesTela.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

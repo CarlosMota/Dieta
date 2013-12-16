@@ -146,10 +146,15 @@
     <phone:PhoneApplicationPage.Resources>
         <shell:ApplicationBar x:Key="appbar1" IsVisible="True">
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.edit.rest.png" IsEnabled="True" Text="Editar" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Configurações" Click="ApplicationBarMenuItem_Click"/>
+            </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-
         <shell:ApplicationBar x:Key="appbar2" IsVisible="True">
             <shell:ApplicationBarIconButton IconUri="/Imagens/appbar.feature.camera.rest.png" IsEnabled="True" Text="Tirar" Click="ApplicationBarIconButton_Click_1"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Configurações" Click="ApplicationBarMenuItem_Click"/>
+            </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.Resources>
 

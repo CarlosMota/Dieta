@@ -213,6 +213,11 @@ namespace Dieta.View
             SavedPhotosList.ItemsSource = ListaImagens;
         }
 
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/ConfiguracoesTela.xaml", UriKind.Relative));
+        }
+
 
 
     }
