@@ -89,7 +89,7 @@ namespace Dieta
             CaloriasTotaisConsumidas = 0;
             if (LerXML())
             {
-                CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.Idade, Usuario.NivelDeAtividade);
+                CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.PesoDesejado, Usuario.Idade, Usuario.NivelDeAtividade);
                 ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
                 for (int i = 0; i < ListaRefeicao.Count; i++)
                 {

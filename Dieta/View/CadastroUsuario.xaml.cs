@@ -99,7 +99,7 @@ namespace Dieta.View
         private void InicializarApp()
         {
                 Usuario usuario = (Application.Current as App).Usuario;
-                (Application.Current as App).CaloriasTotais = Calculo.caluloCalorias(usuario.Sexo, usuario.Altura, usuario.Peso, usuario.Idade, usuario.NivelDeAtividade);
+                (Application.Current as App).CaloriasTotais = Calculo.caluloCalorias(usuario.Sexo, usuario.Altura, usuario.Peso, usuario.PesoDesejado, usuario.Idade, usuario.NivelDeAtividade);
                 (Application.Current as App).ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes((Application.Current as App).CaloriasTotais);
          }
 
