@@ -13,7 +13,7 @@ namespace Dieta.View
 {
     public partial class AdicionarAlimento : PhoneApplicationPage
     {
-        Alimento objAlimento;
+        List<Alimento> listaAlimentoFormatada;
         string index;
 
         public AdicionarAlimento()
@@ -24,8 +24,12 @@ namespace Dieta.View
 
         private void AtualizarAlimento()
         {
-            objAlimento = new Alimento();
-            this.ListaDeAlimentos.ItemsSource = objAlimento.ObtemAlimento();    
+            Alimento objAlimento = new Alimento();
+            listaAlimentoFormatada = objAlimento.ObtemAlimento().ToList();
+            for (int i = 0; i < listaAlimentoFormatada.Count; i++)
+                if(!listaAlimentoFormatada.ElementAt(i).DescricaoPreparacao.Equals("NAO SE APLICA"))
+                    listaAlimentoFormatada.ElementAt(i).DescricaoDoAlimento += " " + listaAlimentoFormatada.ElementAt(i).DescricaoPreparacao;
+            this.ListaDeAlimentos.ItemsSource = listaAlimentoFormatada;    
         }
 
         private void PhoneTextBox_ActionIconTapped(object sender, EventArgs e)
@@ -35,9 +39,9 @@ namespace Dieta.View
 
         private void PhoneTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (objAlimento != null) 
+            if (listaAlimentoFormatada != null) 
             {
-                this.ListaDeAlimentos.ItemsSource = objAlimento.ObtemAlimento().Where(w => w.DescricaoDoAlimento.ToUpper().Contains(txtSearch.Text.ToUpper()));
+                this.ListaDeAlimentos.ItemsSource = listaAlimentoFormatada.Where(w => w.DescricaoDoAlimento.ToUpper().Contains(txtSearch.Text.ToUpper()));
             }
         }
 

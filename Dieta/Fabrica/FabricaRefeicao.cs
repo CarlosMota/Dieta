@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Phone.Scheduler;
+using Dieta.DAO;
 
 namespace Dieta.Fabrica
 {
@@ -45,8 +46,15 @@ namespace Dieta.Fabrica
             refe.Horario = horario;
             refe.Imagem = new System.Windows.Media.Imaging.BitmapImage(new Uri(caminhoImagem, UriKind.RelativeOrAbsolute));
             refe.QuantidadeCaloricaDaRefeicaoTotal = Calculo.calculoQuantidadeCaloricaPorRefeicao(IdRefeicao, QuantidadeCaloricaTotal);
+            refe.QuantidadeCaloricaConsumida = 0;
             refe.NomeDoArquivo = refe.Nome + ".xml";
             refe.IdRefeicao = IdRefeicao;
+            refe.Alimentos = Arquivo.LerRefeicaoXML(refe.NomeDoArquivo, refe);
+            if (refe.Alimentos != null)
+            {
+                for (int j = 0; j < refe.Alimentos.Count; j++)
+                    refe.QuantidadeCaloricaConsumida += refe.Alimentos.ElementAt(j).Calorias;
+            }
             return refe;
         }
 

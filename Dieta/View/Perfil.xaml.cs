@@ -41,12 +41,12 @@ namespace Dieta.View
             ListaImagens = new List<BitmapImage>();
             this.Loaded += Perfil_Loaded;
             camera.Completed += camera_Completed;
-            criarAlbum();
+            criarAlbum(); 
         }
 
         void Perfil_Loaded(object sender, RoutedEventArgs e)
         {
-            ListaRefeicoes.ItemsSource = (Application.Current as App).ListaRefeicao;
+            AtualizarPivotDieta();
             carregarFotos();
         }
 
@@ -124,6 +124,7 @@ namespace Dieta.View
             txtCalorias.Text = "" + CaloriasTotais;
             txtCaloriaTotal.Text = "" + CaloriasTotais;
             txtQuantidadeAgua.Text = "" + Calculo.calculoConsumoAgua((Application.Current as App).Usuario.Peso);
+            txtSemanas.Text = (Calculo.calculoSemanas((Application.Current as App).Usuario.Peso, (Application.Current as App).Usuario.PesoDesejado)).ToString() + " semanas";
         }
 
         void camera_Completed(object sender, PhotoResult e)
@@ -197,7 +198,10 @@ namespace Dieta.View
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            NavigationService.RemoveBackEntry();
+            while (NavigationService.BackStack.Count() > 0)
+            {
+                NavigationService.RemoveBackEntry();
+            }
         }
 
         private ObservableCollection<Foto> _pics = new ObservableCollection<Foto>();
@@ -218,7 +222,13 @@ namespace Dieta.View
             NavigationService.Navigate(new Uri("/View/ConfiguracoesTela.xaml", UriKind.Relative));
         }
 
-
+        private void AtualizarPivotDieta()
+        {
+            txtCaloriaUsuario.DataContext = null;
+            ListaRefeicoes.ItemsSource = null;
+            ListaRefeicoes.ItemsSource = (Application.Current as App).ListaRefeicao;
+            txtCaloriaUsuario.DataContext = (Application.Current as App).CaloriasTotaisConsumidas;
+        }
 
     }
 }

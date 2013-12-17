@@ -65,7 +65,7 @@
                     <Border BorderThickness="1" HorizontalAlignment="Left" Height="158" Margin="232,336,0,0" VerticalAlignment="Top" Width="158" Background="#FFA4A43B">
                         <TextBlock HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" FontSize="18.667" Foreground="White" Text="Tempo Estimado" Margin="9,121,0,0" FontWeight="Normal" TextAlignment="Right"/>
                     </Border>
-                    <TextBlock HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="233,359,0,0" TextAlignment="Center" Text="13 semanas" FontWeight="Normal"/>
+                    <TextBlock Name="txtSemanas" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="233,359,0,0" TextAlignment="Center" Text="13 semanas" FontWeight="Normal"/>
                     <TextBlock HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="69,359,0,0" TextAlignment="Center" FontWeight="Normal">
                 		<Run FontFamily="Bold" x:Name="txtCalorias" Text=""/>
                 		<LineBreak/>
@@ -79,11 +79,11 @@
                 <!--Triple line list no text wrapping-->
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <StackPanel Height="100" Margin="12,12,70,12" Width="224" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock x:Name="txtCaloriaUsuario" Text="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="95" Margin="12,0,0,0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <StackPanel Height="100" Margin="12,12,20,12" Width="274" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock x:Name="txtCaloriaUsuario" Text="{Binding}" TextAlignment="Right" VerticalAlignment="Top" Height="47" Width="120" Margin="12,0,0,0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
                                 <TextBlock Text="/" FontSize="30"/>
-                                <TextBlock x:Name="txtCaloriaTotal" Text="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="95" Margin="0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
+                                <TextBlock x:Name="txtCaloriaTotal" Text="0" VerticalAlignment="Top" Height="47" Width="120" Margin="0" FontSize="30" FontWeight="Bold" Foreground="#FFE68E25"/>
                             </StackPanel>
                                 <TextBlock Text="Kcal/dia" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" Style="{StaticResource PhoneTextSubtleStyle}"/>
                             </StackPanel>

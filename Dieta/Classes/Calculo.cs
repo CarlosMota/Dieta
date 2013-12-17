@@ -86,5 +86,11 @@ namespace Dieta.Classes
 
             return quantidadeCalorica;
         }
+
+        public static double calculoSemanas(double peso, double pesoDesejado)
+        {
+            return Math.Ceiling(Math.Abs((pesoDesejado - peso) * 2));
+        }
+
     }
 }

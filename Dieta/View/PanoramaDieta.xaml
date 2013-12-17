@@ -16,7 +16,7 @@
     shell:SystemTray.IsVisible="False">
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar>
-			<shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click" IconUri="/Toolkit.Content/ApplicationBar.Select.png" IsEnabled="True" Text="Selecionar"/>
+			<shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click" IconUri="/Toolkit.Content/ApplicationBar.Add.png" IsEnabled="True" Text="Adicionar"/>
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
 
@@ -28,9 +28,9 @@
             <controls:PanoramaItem x:Name="ItemCafe" Header="Café">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentCafe"  Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,40,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -56,9 +56,9 @@
             <controls:PanoramaItem x:Name="itemLanche" Header="Lanche">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentLancheManha" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -83,9 +83,9 @@
             <controls:PanoramaItem x:Name="itemAlmoco" Header="Almoço">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentAlmoco" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -110,9 +110,9 @@
             <controls:PanoramaItem x:Name="itemLancheTarde" Header="Lanche Tarde">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentLanchetarde" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -137,9 +137,9 @@
             <controls:PanoramaItem x:Name="itemJanta" Header="Janta">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentJanta" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -164,9 +164,9 @@
             <controls:PanoramaItem x:Name="itemCeia" Header="Ceia">
                 <StackPanel Margin="0">
                     <StackPanel x:Name="ContentCeia" Orientation="Horizontal" Margin="0" Height="100">
-                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,50,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <StackPanel Height="88" Margin="0,12,50,12" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="100" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
+                        <Image Source="{Binding Imagem}" Stretch="Fill" Height="88" Width="100" Margin="12,12,25,12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="88" Margin="0,12,0,12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding QuantidadeCaloricaDaRefeicaoTotal}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="47" Width="150" Margin="0" FontSize="40" FontWeight="Bold" Foreground="#FFE68E25"/>
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">

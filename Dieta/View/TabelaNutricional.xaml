@@ -104,7 +104,7 @@
             <TextBlock Name="Sodio" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="#FF1B43B0" Margin="319,501,0,0" HorizontalAlignment="Left" Width="117" Text="100 mg" TextAlignment="Center" FontWeight="Bold"/>
             <TextBlock Name="nomeDoAlimento" HorizontalAlignment="Left" Height="38" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" FontSize="29.333" Text="Arroz" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="1.224,0.809" TextAlignment="Center"/>
             <Border BorderThickness="1" HorizontalAlignment="Left" Height="65" Margin="10,48,0,0" VerticalAlignment="Top" Width="271" Background="#FFF5AE58">
-                <TextBox Height="65" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Foreground="White" Margin="9,-1" Text="" TextAlignment="Center" RenderTransformOrigin="0.633,-0.138" FontWeight="Bold"/>
+                <TextBox Name="tBoxGramas" InputScope="NumericPassword" Height="65" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="Black"  Margin="9,-1" Text="" TextAlignment="Center" RenderTransformOrigin="0.633,-0.138" FontWeight="Bold"/>
             </Border>
             <TextBlock HorizontalAlignment="Left" Height="26" Margin="67,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="#FF782626" Text="Quantidade" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" Height="26" Margin="226,112,-55,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="20" Foreground="#FF782626" TextAlignment="Center" Text="Porção" RenderTransformOrigin="0.679,-2.673"/>
@@ -114,7 +114,8 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar>
-            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Add.png" Text="Adicionar" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Check.png" Text="concluído" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Cancel.png" Text="cancelar" Click="ApplicationBarIconButton_Click_1"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

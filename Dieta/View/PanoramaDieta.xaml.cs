@@ -36,12 +36,12 @@ namespace Dieta.View
 
         private void lerRefeicoes()
         {
-            ListaCafe.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(0).NomeDoArquivo, ListaRefeicao.ElementAt(0));
-            ListaLanche.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(1).NomeDoArquivo, ListaRefeicao.ElementAt(1));
-            ListaAlmoco.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(2).NomeDoArquivo, ListaRefeicao.ElementAt(2));
-            ListaLancheTarde.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(3).NomeDoArquivo, ListaRefeicao.ElementAt(3));
-            ListaJanta.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(4).NomeDoArquivo, ListaRefeicao.ElementAt(4));
-            ListaCeia.ItemsSource = Arquivo.LerRefeicaoXML(ListaRefeicao.ElementAt(5).NomeDoArquivo, ListaRefeicao.ElementAt(5));
+            ListaCafe.ItemsSource = ListaRefeicao.ElementAt(0).Alimentos;
+            ListaLanche.ItemsSource = ListaRefeicao.ElementAt(1).Alimentos;
+            ListaAlmoco.ItemsSource = ListaRefeicao.ElementAt(2).Alimentos;
+            ListaLancheTarde.ItemsSource = ListaRefeicao.ElementAt(3).Alimentos;
+            ListaJanta.ItemsSource = ListaRefeicao.ElementAt(4).Alimentos;
+            ListaCeia.ItemsSource = ListaRefeicao.ElementAt(5).Alimentos;
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -52,6 +52,10 @@ namespace Dieta.View
             if (NavigationContext.QueryString.TryGetValue("idRefeicao", out index)&&i==-1)
             {
                 panoramaDieta.DefaultItem = panoramaDieta.Items[int.Parse(index)];
+            }
+            while (NavigationService.BackStack.Count() > 1)
+            {
+                NavigationService.RemoveBackEntry();
             }
         }
 

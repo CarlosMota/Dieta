@@ -24,6 +24,7 @@ namespace Dieta.View
         public CadastroUsuario()
         {
             InitializeComponent();
+            (Application.Current as App).configuracoes.setLogin("cadastro", "true");
             ConversorNivelAtividade conversorNivel = new ConversorNivelAtividade();
             NiveisAtividade = conversorNivel.VetorStringNiveisDeAtividade();
             this.lPickerAtividade.ItemsSource = NiveisAtividade;
@@ -72,10 +73,7 @@ namespace Dieta.View
                 InicializarApp();
                 ConfigurarReminders();
                 MessageBox.Show("Dados cadastrados/atualizados com sucesso");
-                if (NavigationService.BackStack.Count() > 0)
-                    NavigationService.GoBack();
-                else
-                    NavigationService.Navigate(new Uri("/View/Perfil.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/View/Perfil.xaml", UriKind.Relative));
             }
         }
 
@@ -100,7 +98,6 @@ namespace Dieta.View
 
         private void InicializarApp()
         {
-                (Application.Current as App).configuracoes.setLogin("cadastro", "true");
                 Usuario usuario = (Application.Current as App).Usuario;
                 (Application.Current as App).CaloriasTotais = Calculo.caluloCalorias(usuario.Sexo, usuario.Altura, usuario.Peso, usuario.Idade, usuario.NivelDeAtividade);
                 (Application.Current as App).ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes((Application.Current as App).CaloriasTotais);

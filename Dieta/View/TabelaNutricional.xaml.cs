@@ -44,6 +44,8 @@ namespace Dieta.View
         void TabelaNutricional_Loaded(object sender, RoutedEventArgs e)
         {
             nomeDoAlimento.Text = alimento.DescricaoDoAlimento;
+            if (!alimento.DescricaoPreparacao.Equals("NAO SE APLICA"))
+                nomeDoAlimento.Text += " " + alimento.DescricaoPreparacao;
             ValorEnergetico.Text = ""+calorias;
             Proteinas.Text = ""+proteinas;
             GordurasTotais.Text = "" + gorduraTotal;
@@ -79,6 +81,9 @@ namespace Dieta.View
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
+            if (!ChecarPreenchimento())
+                return;
+            calcularQuantidade(double.Parse(tBoxGramas.Text));
             Alimento novoAlimento = new Alimento();
             Refeicao refe = (Application.Current as App).ListaRefeicao.ElementAt(int.Parse(index));
             novoAlimento.DescricaoDoAlimento = alimento.DescricaoDoAlimento;
@@ -92,8 +97,34 @@ namespace Dieta.View
             novoAlimento.GorduraSaturada = gorduraSaturada;
             novoAlimento.GorduraTrans = gorduraTrans;
             refe.Alimentos.Add(novoAlimento);
+            refe.QuantidadeCaloricaConsumida += novoAlimento.Calorias;
+            (Application.Current as App).CaloriasTotaisConsumidas += novoAlimento.Calorias;
             Arquivo.SalvarXML(refe.NomeDoArquivo, refe);
-            NavigationService.Navigate(new Uri("/View/PanoramaDieta.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/View/PanoramaDieta.xaml?idRefeicao="+index, UriKind.RelativeOrAbsolute));
+        }
+
+        private bool ChecarPreenchimento()
+        {
+                if (tBoxGramas.Text.Trim().Length <= 0)
+                {
+                    MessageBox.Show("Por favor insira um valor para gramas");
+                    return false;
+                }
+                try
+                {
+                    double.Parse(tBoxGramas.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Por favor insira um valor numérico válido em gramas");
+                    return false;
+                }
+                return true;
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

@@ -40,6 +40,7 @@ namespace Dieta
         public Configuracoes configuracoes;
         public DataBaseContext database;
         public double CaloriasTotais;
+        public double CaloriasTotaisConsumidas;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -85,10 +86,15 @@ namespace Dieta
                 popularBanco();
                 ConfiguracoesIniciais();
             }
+            CaloriasTotaisConsumidas = 0;
             if (LerXML())
             {
                 CaloriasTotais = Calculo.caluloCalorias(Usuario.Sexo, Usuario.Altura, Usuario.Peso, Usuario.Idade, Usuario.NivelDeAtividade);
                 ListaRefeicao = Fabrica.FabricaRefeicao.criarRefeicoes(CaloriasTotais);
+                for (int i = 0; i < ListaRefeicao.Count; i++)
+                {
+                    CaloriasTotaisConsumidas += ListaRefeicao.ElementAt(i).QuantidadeCaloricaConsumida;
+                }
             }
         }
 
