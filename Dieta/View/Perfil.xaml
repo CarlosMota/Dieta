@@ -66,7 +66,7 @@
                         <TextBlock HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" FontSize="18.667" Foreground="White" Text="Tempo Estimado" Margin="9,121,0,0" FontWeight="Normal" TextAlignment="Right"/>
                     </Border>
                     <TextBlock Name="txtSemanas" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="233,359,0,0" TextAlignment="Center" Text="13 semanas" FontWeight="Normal"/>
-                    <TextBlock HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="69,359,0,0" TextAlignment="Center" FontWeight="Normal">
+                    <TextBlock HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="34.667" Foreground="White" Margin="69,364,0,0" TextAlignment="Center" FontWeight="Normal">
                 		<Run FontFamily="Bold" x:Name="txtCalorias" Text=""/>
                 		<LineBreak/>
                 		<Run Text="kcal"/>

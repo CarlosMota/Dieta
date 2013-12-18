@@ -16,7 +16,7 @@
 
     
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -24,35 +24,45 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="configurações" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="#DIETA" Foreground="#FFE66B25" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="configurações" Foreground="#FFE66B25" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="Notificar hora de beber água"/>
+            <TextBlock Foreground="#FF704E4E" Text="Notificar hora de beber água"/>
             <toolkit:ToggleSwitch x:Name="TSwitchAgua" 
+                                  Foreground="#FF704E4E"
                                   Width="200" 
                                   IsChecked="{Binding}"
                                   HorizontalAlignment="Left"
                                   Checked="TSwitchAgua_Checked"
                                   Unchecked="TSwitchAgua_Unchecked"/>
-            <TextBlock Text="Avisar a cada:" />
+            <TextBlock   Foreground="#FF704E4E"
+                         Text="Avisar a cada:" />
             <toolkit:TimePicker x:Name="TPickerIntervaloAgua" 
+                                Foreground="Black"
+                                Background="WhiteSmoke"
                                 ValueStringFormat="{Binding}"
                                 ValueChanged="TPickerIntervaloAgua_ValueChanged"/>
-            <TextBlock Text="Iniciando em:" />
+            <TextBlock Text="Iniciando em:" Foreground="#FF704E4E"/>
             <toolkit:TimePicker x:Name="TPickerComecoAgua" 
                                 ValueStringFormat="{Binding}"
+                                Foreground="Black"
+                                Background="WhiteSmoke"
                                 ValueChanged="TPickerComecoAgua_ValueChanged"/>
-            <TextBlock Text="Até:" />
+            <TextBlock Text="Até:"
+                       Foreground="#FF704E4E"/>
             <toolkit:TimePicker x:Name="TPickerFimAgua" 
+                                Foreground="Black"
+                                Background="WhiteSmoke"
                                 ValueStringFormat="{Binding}"
                                 ValueChanged="TPickerFimAgua_ValueChanged"/>
-            <TextBlock Text="Notificar hora das refeições"/>
+            <TextBlock Foreground="#FF704E4E" Text="Notificar hora das refeições"/>
             <toolkit:ToggleSwitch x:Name="TSwitchRefeicao" 
-                                  Width="200" 
-                                  IsChecked="{Binding}" 
+                                  Width="200"
+                                  IsChecked="{Binding}"
+                                  Foreground="#FF704E4E"
                                   HorizontalAlignment="Left"
                                   Checked="TSwitchRefeicao_Checked"
                                   Unchecked="TSwitchRefeicao_Unchecked"/>

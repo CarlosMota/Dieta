@@ -30,7 +30,7 @@
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FFFFFDFD">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -39,8 +39,10 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="#DIETA" 
+                       Foreground="#FFE66B25" 
                        Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="cadastro" 
+                       Foreground="#FFE66B25"
                        Margin="9,-7,0,0" 
                        Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
@@ -49,48 +51,50 @@
         <ScrollViewer Height="500"  x:Name="ContentPanel"  Grid.Row="1" Margin="10,12,14,97">
             <StackPanel>
                 <StackPanel Margin="0,6">
-                    <TextBlock Text="Nome:" Width="430"/>
-                    <TextBox x:Name="tBoxNome" Width="auto"/>
+                    <TextBlock Text="Nome:" Foreground="#FF704E4E" Width="430"/>
+                    <TextBox x:Name="tBoxNome" Background="WhiteSmoke" Foreground="Black"  Width="auto"/>
                 </StackPanel>
 
                 <StackPanel Margin="0,6">
-                    <TextBlock Text="Sexo: " Width="430"/>
+                    <TextBlock Text="Sexo: " Foreground="#FF704E4E" Width="430"/>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton Name="rButtonMasculino" Content="Masculino"/>
-                        <RadioButton Name="rButtonFeminino" Content="Feminino"/>
+                        <RadioButton Name="rButtonMasculino" Background="WhiteSmoke" Foreground="#FF704E4E" Content="Masculino"/>
+                        <RadioButton Name="rButtonFeminino" Background="WhiteSmoke" Foreground="#FF704E4E" Content="Feminino"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Margin="0,6">
-                    <TextBlock Text="Idade:" Width="430"/>
-                    <TextBox Name="tBoxIdade" 
+                    <TextBlock Text="Idade:" Foreground="#FF704E4E" Width="430"/>
+                    <TextBox Name="tBoxIdade" Background="WhiteSmoke" Foreground="Black"
                              InputScope="NumericPassword"/>
                 </StackPanel>
 
                 <StackPanel Margin="0,6">
-                    <TextBlock Text="Peso: " Width="430"/>
-                    <TextBox Name="tBoxPeso"
+                    <TextBlock Text="Peso: " Foreground="#FF704E4E" Width="430"/>
+                    <TextBox Name="tBoxPeso" Background="WhiteSmoke" Foreground="Black"
                              InputScope="NumericPassword"/>
 
                 </StackPanel>
 
                 <StackPanel Margin="0,6">
-                    <TextBlock Text="Altura(m):" Width="430"/>
+                    <TextBlock Text="Altura(m):" Foreground="#FF704E4E" Width="430"/>
 
                     <TextBox Name="tBoxAltura" 
+                             Background="WhiteSmoke" Foreground="Black"
                              InputScope="NumericPassword"/>
                 </StackPanel>
 
                 <StackPanel Name="sPanelLPickerAtividade" Margin="0,12">
-                    <TextBlock Text="Nível de atividade:" Width="430"/>
+                    <TextBlock Text="Nível de atividade:" Foreground="#FF704E4E" Width="430"/>
                     <toolkit:ListPicker Name="lPickerAtividade" 
                                         ItemTemplate="{Binding itemLPickerTemplate}"
+                                        Background="WhiteSmoke"
                                         FullModeItemTemplate="{StaticResource itemLPickerTemplateModoCheio}"/>
                 </StackPanel>
 
                 <StackPanel Margin="0,12">
-                    <TextBlock Text="Peso desejado:" Width="430"/>
-                    <TextBox Name="tBoxPesoDesejado" InputScope="NumericPassword"/>
+                    <TextBlock Text="Peso desejado:" Width="430" Foreground="#FF704E4E"/>
+                    <TextBox Name="tBoxPesoDesejado" Background="WhiteSmoke" Foreground="#FF704E4E" InputScope="NumericPassword"/>
                 </StackPanel>
 
             </StackPanel>
