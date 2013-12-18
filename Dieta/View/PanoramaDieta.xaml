@@ -17,6 +17,7 @@
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar>
 			<shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click" IconUri="/Toolkit.Content/ApplicationBar.Add.png" IsEnabled="True" Text="Adicionar"/>
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click_1"  IconUri="/Toolkit.Content/ApplicationBar.Select.png" IsEnabled="True" Text="Selecionar"/>
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
 
@@ -39,6 +40,7 @@
                         </StackPanel>
 
                     </StackPanel>
+                    
                     <ListBox x:Name="ListaCafe" ItemsSource="{Binding}" BorderThickness="0" Margin="0,0,0,0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>

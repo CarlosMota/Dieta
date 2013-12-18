@@ -136,3 +136,53 @@ C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemb
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.dll
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.pdb
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\App.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\AdicionarAlimento.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\CadastrarAlimento.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\MainPage.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\CadastroUsuario.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\Dieta.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\PanoramaDieta.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\Perfil.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\SelecionarAlimentos.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\View\TabelaNutricional.g.cs
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\Dieta.g.resources
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\Dieta.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\Dieta.pdb
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\ApplicationIcon.png
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Assets\AppBar\appbar.edit.rest.png
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Background.png
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Dieta.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Dieta.pdb
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\AppManifest.xaml
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Dieta.xap
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.pdb
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\XapCacheFile.xml
+C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache

@@ -15,25 +15,29 @@
     shell:SystemTray.IsVisible="True">
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar>
-			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Add.png" Text="Adicionar" Click="ApplicationBarIconButton_Click"/>
+			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Delete.png" Text="Adicionar" Click="ApplicationBarIconButton_Click"/>
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--Pivot Control-->
-        <controls:Pivot Title="MY APPLICATION">
+        <controls:Pivot Title="#DIETA"  Foreground="#FFE66B25">
             <!--Pivot item one-->
             <controls:PivotItem Header="Alimentos">
-                <Grid>
-                    <TextBlock x:Name="PanoramaItem" Text=""/>
-                </Grid>
+                <ListBox x:Name="ListaAlimentos" ItemsSource="{Binding}" BorderThickness="0" Margin="0,0,0,0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                               <CheckBox Content="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" ></CheckBox>
+                               <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </controls:PivotItem>
 
-            <!--Pivot item two-->
-            <controls:PivotItem Header="item2">
-                <Grid/>
-            </controls:PivotItem>
+            
         </controls:Pivot>
     </Grid>
     

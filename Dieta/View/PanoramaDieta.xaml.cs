@@ -36,6 +36,7 @@ namespace Dieta.View
 
         private void lerRefeicoes()
         {
+
             ListaCafe.ItemsSource = ListaRefeicao.ElementAt(0).Alimentos;
             ListaLanche.ItemsSource = ListaRefeicao.ElementAt(1).Alimentos;
             ListaAlmoco.ItemsSource = ListaRefeicao.ElementAt(2).Alimentos;
@@ -88,6 +89,11 @@ namespace Dieta.View
                 items[i].DataContext = null;
                 items[i].DataContext = ListaRefeicao.ElementAt(i);
             }
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/SelecionarAlimentos.xaml?item=" + this.panoramaDieta.SelectedIndex, UriKind.RelativeOrAbsolute));
         }
     }
 
