@@ -24,6 +24,8 @@ namespace Dieta.View
         public PanoramaDieta()
         {
             InitializeComponent();
+            MultiselectList multiselect = new MultiselectList();
+            multiselect.ItemsSource = (Application.Current as App).ListaRefeicao;
             ListaRefeicao = (Application.Current as App).ListaRefeicao;
             this.ItemCafe.DataContext = ListaRefeicao.ElementAt(0);
             this.itemLanche.DataContext = ListaRefeicao.ElementAt(1);
@@ -36,6 +38,7 @@ namespace Dieta.View
 
         private void lerRefeicoes()
         {
+
             ListaCafe.ItemsSource = ListaRefeicao.ElementAt(0).Alimentos;
             ListaLanche.ItemsSource = ListaRefeicao.ElementAt(1).Alimentos;
             ListaAlmoco.ItemsSource = ListaRefeicao.ElementAt(2).Alimentos;
@@ -88,6 +91,11 @@ namespace Dieta.View
                 items[i].DataContext = null;
                 items[i].DataContext = ListaRefeicao.ElementAt(i);
             }
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/SelecionarAlimentos.xaml?item=" + this.panoramaDieta.SelectedIndex, UriKind.RelativeOrAbsolute));
         }
     }
 

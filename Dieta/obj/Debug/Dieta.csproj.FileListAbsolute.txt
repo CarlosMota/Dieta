@@ -135,3 +135,4 @@ C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\XapCa
 C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs
