@@ -132,7 +132,6 @@ C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\zh-TW
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\View\CadastroUsuario.g.cs
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.g.resources
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\XapCacheFile.xml
-C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.dll
 C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.pdb
@@ -185,3 +184,6 @@ C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\sv-SE\Microsoft.Phone.Controls.To
 C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\XapCacheFile.xml
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.dll
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\Bin\Debug\JeffWilcox.PhoneThemeManager.pdb
+C:\Users\Carlos\Documents\GitHub\Dieta\Dieta\obj\Debug\View\ConfiguracoesTela.g.cs

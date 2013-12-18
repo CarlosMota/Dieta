@@ -133,9 +133,31 @@ namespace Dieta.View
 
         private void SavedPhotosList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
-        }
+            
+            int indice = SavedPhotosList.SelectedIndex;
+            try
+            {
+                if (SavedPhotosList.SelectedIndex == -1)
+                return;
+                MessageBoxResult resultado = MessageBox.Show("Deseja excluir foto?", "Atenção", MessageBoxButton.OKCancel);
+                if (resultado.Equals(MessageBoxResult.OK))
+                {
+                    ListaBytesImagens.Remove(ListaBytesImagens.ElementAt
+                    (SavedPhotosList.SelectedIndex));
+                    ListaImagens.Remove(ListaImagens.ElementAt
+                    (SavedPhotosList.SelectedIndex));
+                    SavedPhotosList.SelectedIndex = -1;
+                    SalvarFoto();
+                    atualizarLBox();
+                    AlterarVisibilidadeTxtAdicionarFotos();
+                }
+            }
+            catch (Exception)
+            {
+               
+            }
 
+        }
         private void carregaPerfil()
         {
             TxtAltura.Text = "" + (Application.Current as App).Usuario.Altura;
@@ -238,6 +260,7 @@ namespace Dieta.View
         {
             SavedPhotosList.ItemsSource = null;
             SavedPhotosList.ItemsSource = ListaImagens;
+            
         }
 
         private void ApplicationBarMenuItem_Click(object sender, EventArgs e)

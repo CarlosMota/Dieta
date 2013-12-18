@@ -29,7 +29,7 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical" Margin="0,0,0,0">
-                               <CheckBox Content="{Binding DescricaoDoAlimento}" Foreground="#FF86B086" Margin="12,12,12,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" ></CheckBox>
+                                <CheckBox Content="{Binding DescricaoDoAlimento}" Foreground="#FF704E4E" Margin="12,12,12,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" ></CheckBox>
                                <TextBlock Text="{Binding Calorias, StringFormat='{}{0} kcal'}" Foreground="#FF86B086"  Style="{StaticResource PhoneTextSubtleStyle}" TextWrapping="Wrap"/>
                             </StackPanel>
                         </DataTemplate>

@@ -53,7 +53,9 @@ namespace Dieta.View
             {
                 listaAlimento.Remove(alimento);
                 (Application.Current as App).ListaRefeicao.ElementAt(int.Parse(index)).Alimentos = listaAlimento;
+                (Application.Current as App).ListaRefeicao.ElementAt(int.Parse(index)).QuantidadeCaloricaConsumida -= alimento.Calorias;
             }
+            
             Arquivo.SalvarXML((Application.Current as App).ListaRefeicao.ElementAt(int.Parse(index)).NomeDoArquivo,
                     (Application.Current as App).ListaRefeicao.ElementAt(int.Parse(index)));
             NavigationService.Navigate(new Uri("/View/PanoramaDieta.xaml?idRefeicao=" + index, UriKind.RelativeOrAbsolute));
