@@ -55,6 +55,10 @@ namespace Dieta.Fabrica
                 for (int j = 0; j < refe.Alimentos.Count; j++)
                     refe.QuantidadeCaloricaConsumida += refe.Alimentos.ElementAt(j).Calorias;
             }
+            else
+            {
+                refe.Alimentos = new List<Alimento>();
+            }
             return refe;
         }
 
