@@ -12,7 +12,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -23,8 +24,8 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="#Dieta" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Alimento" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="#Dieta" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#FFE66B25"/>
+            <TextBlock Text="Alimento" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FFE66B25"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->

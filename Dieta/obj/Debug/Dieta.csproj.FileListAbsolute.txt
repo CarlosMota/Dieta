@@ -185,4 +185,3 @@ C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\sv-SE\Microsoft.Phone.Controls.To
 C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Fabio\Downloads\Dieta\Dieta\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Fabio\Downloads\Dieta\Dieta\obj\Debug\XapCacheFile.xml
-C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\Dieta.csprojResolveAssemblyReference.cache

@@ -233,16 +233,16 @@ namespace Dieta
             phoneApplicationInitialized = true;
             configuracoes = new Configuracoes();
             Uri uri;
-            if (configuracoes.existeCadastro("cadastro"))
+            if (LerXML())
             {
-                if (configuracoes.getCadastro("Cadastro").Equals("false"))
+     /*           if (configuracoes.getCadastro("Cadastro").Equals("false"))
                 {
                     RootFrame.Navigate(new Uri("/View/TelaCadastro.xaml", UriKind.RelativeOrAbsolute));
                 }
                 else
-                {
+                {*/
                     RootFrame.Navigate(new Uri("/View/Perfil.xaml", UriKind.RelativeOrAbsolute));
-                }
+   //             }
             }
             else
             {
