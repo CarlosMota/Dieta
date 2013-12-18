@@ -10,6 +10,8 @@ MDIL image C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\
 
 
 File C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\Dieta.dll output C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\obj\Debug\MDIL\Dieta.dll
+Processing file: C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\JeffWilcox.PhoneThemeManager.dll
+File C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\JeffWilcox.PhoneThemeManager.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\Microsoft.Phone.Controls.dll
 File C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\Microsoft.Phone.Controls.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Fabio\Documents\Visual Studio 2012\Projects\Dieta\Dieta\Bin\Debug\MDIL\Microsoft.Phone.Controls.Toolkit.dll

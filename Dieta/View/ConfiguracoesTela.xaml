@@ -12,7 +12,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0">
 
     
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -42,20 +43,20 @@
                          Text="Avisar a cada:" />
             <toolkit:TimePicker x:Name="TPickerIntervaloAgua" 
                                 Foreground="Black"
-                                Background="WhiteSmoke"
+                                
                                 ValueStringFormat="{Binding}"
                                 ValueChanged="TPickerIntervaloAgua_ValueChanged"/>
             <TextBlock Text="Iniciando em:" Foreground="#FF704E4E"/>
             <toolkit:TimePicker x:Name="TPickerComecoAgua" 
                                 ValueStringFormat="{Binding}"
                                 Foreground="Black"
-                                Background="WhiteSmoke"
+                                
                                 ValueChanged="TPickerComecoAgua_ValueChanged"/>
             <TextBlock Text="Até:"
                        Foreground="#FF704E4E"/>
             <toolkit:TimePicker x:Name="TPickerFimAgua" 
                                 Foreground="Black"
-                                Background="WhiteSmoke"
+                                
                                 ValueStringFormat="{Binding}"
                                 ValueChanged="TPickerFimAgua_ValueChanged"/>
             <TextBlock Foreground="#FF704E4E" Text="Notificar hora das refeições"/>

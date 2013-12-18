@@ -34,7 +34,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 
@@ -62,7 +62,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 
@@ -89,7 +89,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 
@@ -116,7 +116,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 
@@ -143,7 +143,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 
@@ -170,7 +170,7 @@
                             <TextBlock Text="Kcal" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
                         <StackPanel Margin="0,12" Height="88" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <toolkit:TimePicker  ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
+                            <toolkit:TimePicker Background="Transparent" ValueStringFormat="{Binding Horario}" ValueChanged="ttp_ValueChanged" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="147" Margin="0" FontWeight="Bold" Foreground="#FF3831DA"/>
                             <TextBlock Text="Horário" Foreground="#FF86B086" HorizontalAlignment="Center" Margin="0" FontSize="26.667"/>
                         </StackPanel>
 

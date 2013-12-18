@@ -12,7 +12,8 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0">
     
     
 	
@@ -116,33 +117,38 @@
             <!--Pivot item Evolução-->
             <controls:PivotItem x:Name="PivotEvolucao" Header="Evolução">
                 <!--Triple line list no text wrapping-->
-				<StackPanel>
-					<StackPanel Height="260">
-						
-					</StackPanel>
-                    <StackPanel Height="280" Orientation="Vertical" Background="Black" >
-                        <TextBlock Text="Fotos Evolução" Foreground="White" FontWeight="Bold" FontSize="30" Margin="10,10,10,10"/>
-                        <ListBox  Height="210" HorizontalAlignment="Center" Name="SavedPhotosList" 
-                                        VerticalAlignment="Top"  SelectionChanged="SavedPhotosList_SelectionChanged" >
-                                <ListBox.Resources>
-                                    <DataTemplate x:Key="ImageTemplate">
-                                        <Border Height="auto" Width="auto" Padding="5" >
-                                            <Image Source="{Binding}"/>
-                                        </Border>
-                                    </DataTemplate>
-                                </ListBox.Resources>
-                                <ListBox.ItemTemplate>
-                                    <StaticResource ResourceKey="ImageTemplate"/>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
+                <Grid>
+                    <StackPanel  VerticalAlignment="Center">
+                    <TextBlock Name="txtAdicionarFotos"
+                               Text="Adicione aqui fotos do seu progresso" 
+                               FontSize="{StaticResource PhoneFontSizeLarge}"
+                               VerticalAlignment="Center" 
+                               FontFamily="{StaticResource PhoneFontFamilyLight}"
+                               Foreground="#FF704E4E"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center" 
+                               Margin="10,10,10,10"/>
                     </StackPanel>
-				</StackPanel>
+                    <ListBox HorizontalAlignment="Center" Name="SavedPhotosList" 
+                                        VerticalAlignment="Top"   SelectionChanged="SavedPhotosList_SelectionChanged" >
+                        <ListBox.Resources>
+                            <DataTemplate x:Key="ImageTemplate">
+                                <Border Height="auto" Width="auto" Padding="5" >
+                                    <Image Source="{Binding}"/>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <StaticResource ResourceKey="ImageTemplate"/>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
             </controls:PivotItem>
 
         </controls:Pivot>
 
     </Grid>
-    
+    <!--
     <phone:PhoneApplicationPage.Resources>
         <shell:ApplicationBar x:Key="appbar1" IsVisible="True">
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.edit.rest.png" IsEnabled="True" Text="Editar" Click="ApplicationBarIconButton_Click"/>
@@ -157,7 +163,7 @@
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.Resources>
-
+-->
 
 
 </phone:PhoneApplicationPage>

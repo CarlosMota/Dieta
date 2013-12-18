@@ -86,7 +86,10 @@ namespace Dieta.View
                 if (!nAgua.RemindersAguaConfigurados())
                     nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
                 else
-                    nAgua.AtualizarRemindersAgua((Application.Current as App).Usuario.Peso);
+                {
+                    nAgua.ApagarRemindersAgua();
+                    nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
+                }
             }
             NotificadorRefeicao nRefeicao = new NotificadorRefeicao();
             if (configuracoes.IsReminderRefeicaoOn())

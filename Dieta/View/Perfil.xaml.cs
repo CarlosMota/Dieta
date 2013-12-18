@@ -22,6 +22,7 @@ using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Windows.Navigation;
+using Microsoft.Phone.Shell;
 
 namespace Dieta.View
 {
@@ -48,6 +49,15 @@ namespace Dieta.View
         {
             AtualizarPivotDieta();
             carregarFotos();
+            AlterarVisibilidadeTxtAdicionarFotos();
+        }
+
+        private void AlterarVisibilidadeTxtAdicionarFotos()
+        {
+            if (SavedPhotosList.Items.Count <= 0)
+                txtAdicionarFotos.Visibility = System.Windows.Visibility.Visible;
+            else
+                txtAdicionarFotos.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         private void ListaRefeicoes_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -81,13 +91,25 @@ namespace Dieta.View
 
         private void Pivot_Main_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ApplicationBarMenuItem itemConfiguracoes = new ApplicationBarMenuItem("configurações");
+            itemConfiguracoes.Click += ApplicationBarMenuItem_Click;
             if (Pivot_Main.SelectedIndex == 0)
             {
-                ApplicationBar = (Microsoft.Phone.Shell.ApplicationBar)Resources["appbar1"];
+                ApplicationBar = ThemeManager.CreateApplicationBar();
+                ApplicationBarIconButton botaoEditar = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.edit.rest.png", UriKind.Relative));
+                botaoEditar.Text = "editar";
+                botaoEditar.Click += ApplicationBarIconButton_Click;
+                ApplicationBar.Buttons.Add(botaoEditar);
+                ApplicationBar.MenuItems.Add(itemConfiguracoes);
             }
             else if (Pivot_Main.SelectedIndex == 2)
             {
-                ApplicationBar = (Microsoft.Phone.Shell.ApplicationBar)Resources["appbar2"];
+                ApplicationBar = ThemeManager.CreateApplicationBar();
+                ApplicationBarIconButton botaoFoto = new ApplicationBarIconButton(new Uri("/Imagens/appbar.feature.camera.rest.png", UriKind.Relative));
+                botaoFoto.Text = "foto";
+                botaoFoto.Click += ApplicationBarIconButton_Click_1;
+                ApplicationBar.Buttons.Add(botaoFoto);
+                ApplicationBar.MenuItems.Add(itemConfiguracoes);
             }
         }
 
@@ -148,6 +170,7 @@ namespace Dieta.View
             {
 
             }
+            AlterarVisibilidadeTxtAdicionarFotos();
         }
 
         private void SalvarFoto()

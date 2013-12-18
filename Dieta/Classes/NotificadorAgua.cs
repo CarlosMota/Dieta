@@ -36,7 +36,7 @@ namespace Dieta.Classes
                 ScheduledActionService.Add(reminder);
             }
         }
-
+        /*
         public void AtualizarRemindersAgua(double peso)
         {
             if (!RemindersAguaConfigurados())
@@ -65,15 +65,17 @@ namespace Dieta.Classes
                 ScheduledActionService.Replace(reminder);
             }
         }
-
+        */
         public void ApagarRemindersAgua()
         {
             if (!RemindersAguaConfigurados())
                 return;
             string nome = "agua";
-            for (int i = 0; ScheduledActionService.Find(nome + i.ToString()) != null; i++)
+            int i = 0;
+            while(ScheduledActionService.Find(nome + i.ToString()) != null)
             {
                 ScheduledActionService.Remove(nome + i.ToString());
+                i++;
             }
         }
 

@@ -54,7 +54,8 @@ namespace Dieta.View
             Configuracoes configuracoes = new Configuracoes();
             configuracoes.SetIntervaloAgua(MetodosTempo.DateTimeToString((DateTime)e.NewDateTime));
             NotificadorAgua nAgua = new NotificadorAgua();
-            nAgua.AtualizarRemindersAgua((Application.Current as App).Usuario.Peso);
+            nAgua.ApagarRemindersAgua();
+            nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
             Atualizar();
         }
 
@@ -63,7 +64,8 @@ namespace Dieta.View
             Configuracoes configuracoes = new Configuracoes();
             configuracoes.SetHorarioInicioAgua(MetodosTempo.DateTimeToString((DateTime)e.NewDateTime));
             NotificadorAgua nAgua = new NotificadorAgua();
-            nAgua.AtualizarRemindersAgua((Application.Current as App).Usuario.Peso);
+            nAgua.ApagarRemindersAgua();
+            nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
             Atualizar();
         }
 
@@ -72,7 +74,8 @@ namespace Dieta.View
             Configuracoes configuracoes = new Configuracoes();
             configuracoes.SetHorarioFimAgua(MetodosTempo.DateTimeToString((DateTime)e.NewDateTime));
             NotificadorAgua nAgua = new NotificadorAgua();
-            nAgua.AtualizarRemindersAgua((Application.Current as App).Usuario.Peso);
+            nAgua.ApagarRemindersAgua();
+            nAgua.CriarRemindersAgua((Application.Current as App).Usuario.Peso);
             Atualizar();
         }
 

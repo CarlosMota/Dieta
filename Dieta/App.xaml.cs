@@ -61,7 +61,8 @@ namespace Dieta
 
             // Phone-specific initialization
             InitializePhoneApplication();
-
+            ThemeManager.ToLightTheme();
+            
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)
             {
