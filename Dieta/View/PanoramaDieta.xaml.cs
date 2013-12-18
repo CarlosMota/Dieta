@@ -24,8 +24,6 @@ namespace Dieta.View
         public PanoramaDieta()
         {
             InitializeComponent();
-            MultiselectList multiselect = new MultiselectList();
-            multiselect.ItemsSource = (Application.Current as App).ListaRefeicao;
             ListaRefeicao = (Application.Current as App).ListaRefeicao;
             this.ItemCafe.DataContext = ListaRefeicao.ElementAt(0);
             this.itemLanche.DataContext = ListaRefeicao.ElementAt(1);
